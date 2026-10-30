@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTimeline();
 });
 
+/* Once initial page load finishes, warm up remaining carousel slides
+   in the background so each is loaded before auto-rotation */
+window.addEventListener('load', () => {
+    document.querySelectorAll('.plo-home-carousel-slide img[loading="lazy"]').forEach((img) => {
+        img.loading = 'eager';
+    });
+});
+
 (function () {
     const carousel = document.querySelector('.plo-home-carousel');
     if (!carousel) return;
