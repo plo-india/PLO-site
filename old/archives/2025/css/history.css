@@ -1,0 +1,231 @@
+:root {
+    --main: #3fb1fb;
+    --box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --rank-gold: #ffd700;
+    --rank-silver: #adacac;
+    --rank-bronze: #e7ab6f;
+    --rank-sky: #e7f5fe;
+    --primary-dark: #041c4c;
+    --primary-light: #3fb1fb;
+    --secondary: #5f6368;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background: var(--primary-light);
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Pagination Section */
+
+#v-pills-tab .nav-link {
+    width: 150px;
+    color: var(--primary-dark);
+}
+
+#v-pills-tab .nav-link:focus,
+#v-pills-tab .nav-link:visited,
+#v-pills-tab .nav-link:active,
+#v-pills-tab .nav-link.active {
+    color: #fff;
+    background-color: var(--primary-dark);
+}
+
+#v-pills-tabContent .nav-link {
+    width: 150px;
+    color: var(--primary-dark);
+}
+
+#v-pills-tabContent .nav-link:focus,
+#v-pills-tabContent .nav-link:visited,
+#v-pills-tabContent .nav-link:active,
+#v-pills-tabContent .nav-link.active {
+    color: #fff;
+    background-color: var(--primary-dark);
+}
+
+#v-pills-tabContent li img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1.5rem;
+}
+
+#pills-tabContent .list-group .list-group-item.active {
+    background: var(--primary-light);
+    border: none;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#pills-tabContent .list-group .list-group-item .iconOnly {
+    display: none;
+    float: right;
+}
+
+.pills-camp {
+    width: 1100px;
+}
+
+.camp_names {
+    position: relative;
+    overflow: scroll;
+    height: 700px;
+}
+
+.camp_names::-webkit-scrollbar {
+    display: none;
+}
+
+.camp_names .list-group-item.rank-gold {
+    background-color: var(--rank-gold);
+}
+
+.camp_names .list-group-item.rank-silver {
+    background-color: var(--rank-silver);
+}
+
+.camp_names .list-group-item.rank-bronze {
+    background-color: var(--rank-bronze);
+}
+
+.camp_names .list-group-item.rank-sky {
+    background-color: var(--rank-sky);
+}
+
+.tooltip-inner {
+    background: rgb(85, 149, 209) !important;
+    background: linear-gradient(337deg, rgba(85, 149, 209, 1) 0%, rgba(139, 198, 252, 1) 50%, rgba(85, 149, 209, 1) 99%) !important;
+}
+
+.list-group .plo-description {
+    width: 50%;
+}
+
+
+.list-group p span {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+
+.card .card-body .card-text span,
+.card .card-body .card-subtitle span {
+    font-weight: bold;
+}
+
+#pills-tabContent .list-group .list-group-item .IndiaIconTextBadge {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge {
+    display: flex;
+    gap: 5px;
+    float: right;
+    background-color: #5595d1;
+    padding: 2px 5px;
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.silver {
+    background-color: var(--rank-silver);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.HonorableMention {
+    color: #000;
+    background-color: var(--rank-sky);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.gold {
+    background-color: var(--rank-gold);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.bronze {
+    background-color: var(--rank-bronze);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.OneBestSolution {
+    background-color: var(--main);
+}
+
+/* Pagination Section */
+
+/* Media Query */
+@media (max-width: 991px) {
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menuBars {
+        display: initial;
+    }
+
+    .header .head-navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 0.2rem solid #222;
+        background: #000;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .head-navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .head-navbar a {
+        display: flex;
+        background: #333;
+        margin: 1.3rem;
+        padding: 1.3rem;
+        border-radius: 0.5rem;
+    }
+
+    .fa-times {
+        transform: rotate(90deg);
+    }
+
+    #v-pills-tab .nav-link {
+        width: 75px;
+    }
+
+    #v-pills-tabContent .nav-link {
+        width: 80px;
+    }
+
+    .camp_names {
+        height: 550px;
+    }
+
+    .list-group .plo-description {
+        width: 100%;
+    }
+    .pills-camp {
+        width: 250px;
+    }
+    #pills-tabContent .list-group .list-group-item .IconTextBadge {
+        display: none;
+    }
+    #pills-tabContent .list-group .list-group-item .iconOnly {
+        display: flex;
+    }
+}

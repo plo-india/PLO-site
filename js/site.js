@@ -16,13 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ---------------------------------------------------------
    Hall ticket & results portal (the private plo-portal backend).
-   Put its address here once it's live, e.g. "https://plo-portal.iiit.ac.in".
-   Leave it empty and the site never shows any hall ticket or results links.
+   Once it's live, put its address here:
+     - "/portal" when the portal runs on the same domain as this site (one IIIT server), or
+     - a full address such as "https://plo-portal.iiit.ac.in" when it has its own domain.
+   Leave it empty and the site never shows the Sign in tab or any hall ticket/results notices.
 --------------------------------------------------------- */
-const PORTAL_URL = "";
+const PORTAL_URL = "/portal";
 
 /* Ask the portal what's been released, then update the page:
-   - data-portal-show="portal" (the navbar "Sign in" tab) appears whenever the portal is reachable;
+   - data-portal-show="portal" (the navbar "Sign in" tab) appears while hall tickets or results are released;
    - data-portal-show="hall_tickets|results" notices appear while that's released;
    - data-portal-hide="…" text disappears while that's released;
    - data-portal-href="/" links point at the portal's sign-in page.
@@ -38,7 +40,9 @@ async function initPortal() {
   } catch {
     return;
   }
-  const isOpen = { portal: true, hall_tickets: !!status.hall_tickets_open, results: !!status.results_open };
+  const isOpen = { hall_tickets: !!status.hall_tickets_open, results: !!status.results_open };
+  // The Sign in tab only appears while there's something to sign in for.
+  isOpen.portal = isOpen.hall_tickets || isOpen.results;
 
   document.querySelectorAll("[data-portal-href]").forEach((a) => {
     a.href = base + a.dataset.portalHref;

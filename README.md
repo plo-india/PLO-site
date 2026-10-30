@@ -53,8 +53,9 @@ The website has no student data. Hall tickets and results live in the private po
 
 The site then checks the portal on every page load:
 
-- A **Sign in** tab appears in the navbar corner of every page. It leads to the portal's single sign-in,
-  where students use their roll number and date of birth and see everything that's been released.
+- While hall tickets or results are released, a **Sign in** tab appears in the navbar corner of every page.
+  It leads to the portal's single sign-in, where students use their roll number and date of birth and see
+  everything that's been released. When nothing is released, the tab is hidden.
 - While an admin has **Open hall tickets** on: the announcement strip says "Hall tickets … are out!" and a
   highlighted notice appears on the home page and the Centres page.
 - While **Release results** is on: the strip announces the results (results take priority), and notices appear

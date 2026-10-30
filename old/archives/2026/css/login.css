@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
+:root {
+    --primary-dark: #041c4c;
+    --primary-light: #3fb1fb;
+    --secondary: #5f6368;
+    --box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#LoginFormWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+#loginForm {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+}
+
+#loginForm .form-group input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+#loginForm .form-group label {
+    display: block;
+}
+
+#loginForm .login-button {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    letter-spacing: 0.5px;
+    padding: 6px 12px 6px 12px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+    background: var(--primary-light);
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color .2s, box-shadow .2s, color .2s, -webkit-box-shadow .2s;
+    vertical-align: middle;
+    align-self: flex-start;
+}
+
+#admitCardDownload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 210mm;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+#admitCardDownloadButton {
+    display: inline-flex;
+    justify-content: space-around;
+    letter-spacing: 0.5px;
+    padding: 6px 12px 6px 12px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+    background: var(--primary-light);
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color .2s, box-shadow .2s, color .2s, -webkit-box-shadow .2s;
+    vertical-align: middle;
+    align-self: flex-start;
+}
+
+#admitCardWrapper {
+    width: 210mm;
+    height: 297mm;
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#admitCard {
+    height: 295mm;
+    padding: 15mm;
+    border: 1px solid #ccc;
+}
+
+#admitCard h6 {
+    color: var(--primary-dark);
+}
+
+#admitCard #ExamCentreSection {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#admitCard #ExamCentreDetails {
+    width: 50%;
+}
+
+#admitCard #CandidateSignature {
+    width: 35%;
+    text-align: center;
+}
+
+#admitCard #ExamCentreSection p {
+    margin: 0;
+}
+
+#admitCard #ExamInstructions p#ExamInstructionsHeader {
+    font-size: 16px;
+    margin: 0 0 12px;
+    padding: 6px;
+    border-top: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
+    color: var(--primary-dark);
+}
+
+#admitCard #ExamInstructions li {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    #admitCard {
+        box-shadow: none;
+        page-break-after: always;
+    }
+}
+
+table td {
+    width: 25%;
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+table td:nth-child(1) {
+    width: 60px;
+}
+
+table td:nth-child(3) {
+    width: 115px;
+}
+
+table td:nth-child(2),
+table td:nth-child(4) {
+    width: 200px;
+}
+
+h6 {
+    margin-bottom: 4px;
+}
+
+
+/* Modern Browsers */
+#emailInput::placeholder, 
+#passwordInput::placeholder {
+    font-size: 0.9rem;
+    opacity: 0.7;     
+}
+
+
+input.form-control {
+    font-size: 1.1rem; 
+}

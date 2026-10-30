@@ -1,0 +1,80 @@
+main .highlighted-container p {
+    display: inline-block;
+    margin: 20px;
+    color: #ffffff;
+    line-height: 1.4em;
+    text-decoration: none;
+    padding: 0.9em 1.5em;
+    border: 0.18em solid transparent;
+    background: #041c4c;
+    border-radius: 3.5em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+main .highlighted-container p:before {
+    content: "";
+    display: block;
+    border-radius: 3.5em;
+    position: absolute;
+    background: inherit;
+    top: 0.2em;
+    left: 0.2em;
+    right: 0.2em;
+    bottom: 0.2em;
+    z-index: -1;
+}
+
+main .highlighted-container p:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    transform: rotate(0deg);
+    animation: gradient 2s ease alternate infinite;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+main .highlighted-container p:after {
+    background: var(--primary-dark);
+    background: -moz-linear-gradient(left, var(--primary-dark) 0%, var(--primary-light) 100%);
+    background: -webkit-linear-gradient(left, var(--primary-dark) 0%, var(--primary-light) 100%);
+    background: linear-gradient(to right, var(--primary-dark) 0%, var(--primary-light) 100%);
+    background-size: 300% 300%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#041c4c', endColorstr='#3fb1fb', GradientType=1);
+}
+
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 95% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 95% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -419,3 +419,24 @@ form.form-inline {
   margin-right: 14px;
   font-size: 1.1rem;
 }
+
+/* ---------- "Switch to old version" button in navbar ---------- */
+.version-switch-btn {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 4px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  border: 1.5px solid #6c757d;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.version-switch-btn:hover {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  text-decoration: none;
+}
