@@ -107,8 +107,8 @@ function initDynamicBanner() {
     // REGISTRATION OPEN
     else if (today >= registrationStart && today <= registrationEnd) {
 
-        bannerText.textContent =
-            "PLO 2026-2027 Registration is OPEN — Last date 31 October 2026!";
+        bannerText.innerHTML =
+            "PLO 2026-2027 Registration is OPEN — Last date <del>31 October 2026</del> 20 November 2026!";
 
         bannerLink.textContent = "Register Now →";
         bannerLink.href = "registration.html";
