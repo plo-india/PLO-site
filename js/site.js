@@ -82,7 +82,7 @@ window.addEventListener("load", () => {
 --------------------------------------------------------- */
 const DATES = {
   registrationStart: "2026-09-19",
-  registrationEnd: "2026-10-31",
+  registrationEnd: "2026-11-20",
   round1: "2026-11-29",
   results: "2027-01-15",
   aploStart: "2027-03-01",
@@ -118,7 +118,7 @@ function initBanner() {
     label = "View Timeline →";
     href = "index.html#home-timeline";
   } else if (t <= d.registrationEnd) {
-    msg = "PLO 2026-2027 Registration is OPEN — Last date 31 October 2026!";
+    msg = "PLO 2026-2027 Registration is OPEN — Last date <del>31 October 2026</del> 20 November 2026!";
     label = "Register Now →";
     href = "registration.html";
   } else if (t < d.results) {
@@ -147,7 +147,7 @@ function initBanner() {
     href = "previous.html";
   }
 
-  text.textContent = msg;
+  text.innerHTML = msg;
   link.textContent = label;
   link.href = href;
 }

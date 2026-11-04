@@ -440,3 +440,129 @@ form.form-inline {
   border-color: #6c757d;
   text-decoration: none;
 }
+
+/* =========================================================
+   PLO 2027 WEBINAR SERIES
+   Added for the homepage announcement.
+   ========================================================= */
+.plo-webinar-home {
+  margin: 0 0 60px;
+  padding: 36px 28px;
+  border: 1px solid #fed7aa;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff7ed 0%, #fff1f2 100%);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+.plo-webinar-home-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+.plo-webinar-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.plo-webinar-home h2 {
+  margin: 0 0 14px;
+  color: #7f1d1d;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.25;
+}
+.plo-webinar-home p {
+  max-width: 720px;
+  margin: 0 auto 20px;
+  color: #475569;
+  line-height: 1.75;
+}
+.plo-webinar-home-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0 0 24px;
+}
+.plo-webinar-home-details span {
+  color: #334155;
+  font-weight: 650;
+}
+.plo-webinar-home-details i {
+  margin-right: 7px;
+  color: #dc2626;
+}
+.plo-webinar-home-button,
+.plo-webinar-join-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #b91c1c;
+  color: #fff;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.plo-webinar-home-button:hover,
+.plo-webinar-join-button:hover {
+  background: #7f1d1d;
+  color: #fff;
+  transform: translateY(-1px);
+}
+@media (max-width: 700px) {
+  .plo-webinar-home {
+    padding: 28px 18px;
+  }
+  .plo-webinar-home-details {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   Examination Centre Allocation Notice (registration page)
+   ========================================================= */
+.plo-2027-centre-notice {
+  margin: 28px 0;
+  padding: 24px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-left: 5px solid #ea580c;
+  border-radius: 12px;
+  text-align: center;
+}
+.plo-2027-centre-notice h2 {
+  color: #9a3412;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.centre-notice-item {
+  margin-bottom: 16px;
+}
+.centre-notice-item:last-child {
+  margin-bottom: 0;
+}
+.centre-notice-item strong {
+  color: #7c2d12;
+  display: block;
+  margin-bottom: 6px;
+}
+.centre-notice-item p {
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .plo-2027-centre-notice {
+    padding: 18px;
+  }
+}
