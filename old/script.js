@@ -70,8 +70,8 @@ function initDynamicBanner() {
     // =====================================================
 
     // Step 1 - Round 1 Registration
-    const registrationStart = new Date("2026-09-19");
-    const registrationEnd   = new Date("2026-11-20");
+    const registrationStart = new Date("2026-09-19T00:00:00");
+    const registrationEnd   = new Date("2026-11-20T23:59:59");
 
     // Step 2 - Round 1 Results
     const resultsDate = new Date("2027-01-15");

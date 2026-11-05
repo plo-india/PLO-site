@@ -52,8 +52,49 @@ main {
 .navbar .active > .nav-link {
   text-decoration: underline;
 }
+
+/* Organised by - visible on top bar on mobile and right side on desktop */
+.organised-by {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.organised-by small,
+.organised-by span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+  white-space: nowrap;
+}
 .organised-by img {
   height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+@media (min-width: 992px) {
+  .organised-by {
+    margin-left: 18px;
+    padding-left: 18px;
+    border-left: 1px solid #ddd;
+  }
+}
+@media (max-width: 991.98px) {
+  .organised-by img {
+    height: 34px;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media (max-width: 440px) {
+  .organised-by small,
+  .organised-by span {
+    display: none;
+  }
+  .organised-by img {
+    height: 30px;
+  }
 }
 
 /* ---------- Announcement banner ---------- */
