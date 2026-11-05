@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var file = path.substring(path.lastIndexOf('/') + 1);
+      if (file && file.endsWith('.html') && !path.includes('/new/') && !path.includes('/old/')) {
+        if (file === 'about.html') {
+          window.location.replace('new/olympiad.html' + window.location.search + window.location.hash);
+        } else if (file === 'plo.html') {
+          window.location.replace('new/olympiad.html#plo');
+        } else if (file === 'ilo.html') {
+          window.location.replace('new/olympiad.html#iol');
+        } else {
+          window.location.replace('new/' + file + window.location.search + window.location.hash);
+        }
+      }
+    })();
+  </script>
+  <title>Panini Linguistics Olympiad</title>
+</head>
+<body></body>
+</html>
