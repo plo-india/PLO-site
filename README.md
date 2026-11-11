@@ -1,124 +1,547 @@
-# PLO website (merged)
+# Panini Linguistics Olympiad (PLO) Website
 
-The look and evergreen text come from the old (2023) PLO site. Current information (dates, fees, payment links,
-results, team, centres, photos) comes from `PLO-website`. It is plain HTML, CSS and JS with no build step.
+This is a static website for the **Panini Linguistics Olympiad (PLO)**.
 
-- **Live site:** https://plo-india.github.io/PLO-site/
-- **This repo:** https://github.com/plo-india/PLO-site (public; GitHub Pages publishes `main` automatically)
-- **Hall ticket & results portal:** https://github.com/plo-india/plo-portal (private; see its README)
+### Technologies
 
-Every push to `main` goes live within a minute or two. Never commit student data (registration lists, marks,
-anything with names or dates of birth) here: everything in this repo is public.
+* HTML
+* CSS
+* JavaScript
 
-## Run locally
+No backend or database is required.
 
-From inside this folder:
+---
 
-    python3 -m http.server 8767
+## Project Structure
 
-Then open http://localhost:8767/
+```text
+PLO/
+│
+├── index.html
+├── about.html
+├── team.html
+├── participants.html
+├── results.html
+├── resources.html
+├── practice.html
+├── centres.html
+├── contact.html
+├── faq.html
+│
+├── plo.html
+├── lingistics.html
+├── ilo.html
+│
+├── styles.css
+├── script.js
+│
+├── images/
+│   └── logos, images, etc.
+│
+└── README.md
+```
 
-## Pages
+---
 
-| Menu                          | File                | What to update                                                            |
-| ----------------------------- | ------------------- | ------------------------------------------------------------------------- |
-| Home                          | `index.html`        | Welcome text, registration note, timeline                                 |
-| Participate → Registration    | `registration.html` | Dates, fees, payment links, documents                                     |
-| Participate → Eligibility     | `eligibility.html`  | "IOL 2026" direct-entry year                                              |
-| Participate → Centres         | `centres.html`      | Centre table rows (`<tr class="centre-item">`)                            |
-| Participate → FAQs            | `faq.html`          | Questions (copy a `.card` block)                                          |
-| Resources                     | `resources.html`    | Problem rows (`<tr class="level-color level-color-04" data-year="2019">`) |
-| In the Past → Results Archive | `previous.html`     | Year pills and `year-panel` blocks                                        |
-| What is? → PLO / IOL / APLO   | `olympiad.html`     | IOL host and dates, APLO month                                            |
-| What is? → Linguistics        | `linguistics.html`  |                                                                           |
-| What is? → Team               | `team.html`         | Team member cards                                                         |
-| Results                       | `results.html`      | Round 1 results when announced                                            |
+# Updating Website Content
 
-The navbar, announcement strip and footer are repeated at the top and bottom of every page. If you change one,
-change it on all pages.
+## 1. Home Page – `index.html`
 
-## Each new cycle
+### Add a new event to the timeline
 
-1. `js/site.js`: update the `DATES` block at the top. This drives the announcement strip on every page.
-2. `index.html`: update the `data-date` and text of each `timeline-event`. Finished events fade out
-   automatically and the next one is highlighted.
-3. `registration.html`, `faq.html`: update fees and the `payments.iiit.ac.in/plo20XX/...` links.
-4. `previous.html`: add a year pill (`data-year`) and its `year-panel` blocks with ids like `2027-iol`,
-   `2027-camp` and `2027-plo`.
+Copy an existing timeline event and replace the values marked below.
 
-## Hall tickets and results
+```html
+<div class="timeline-row left/right highlight" data-date="YYYY-MM-DD">
 
-The website has no student data. Hall tickets and results live in the private portal
-(`plo-india/plo-portal`). Once the portal is live, put its address in `PORTAL_URL` at the top of `js/site.js`.
+    <div class="timeline-dot">
+        <span>DD</span>
+    </div>
 
-The site then checks the portal on every page load:
+    <div class="timeline-content">
 
-- While hall tickets or results are released, a **Sign in** tab appears in the navbar corner of every page.
-  It leads to the portal's single sign-in, where students use their roll number and date of birth and see
-  everything that's been released. When nothing is released, the tab is hidden.
-- While an admin has **Open hall tickets** on: the announcement strip says "Hall tickets … are out!" and a
-  highlighted notice appears on the home page and the Centres page.
-- While **Release results** is on: the strip announces the results (results take priority), and notices appear
-  on the home page and the Results page, where the "results will be announced…" text is hidden.
+        <span class="timeline-date">
+            MONTH YEAR
+        </span>
 
-Every link goes to the same sign-in page. Turning a switch off reverts the site on the next page load. If
-`PORTAL_URL` is empty or the portal can't be reached, the site simply shows its normal content, with no Sign in
-tab.
+        <span class="status-pill gold">(optional)
+            EVENT STATUS
+        </span>
 
-The notices are plain HTML marked `hidden` with `data-portal-show="hall_tickets"` or `"results"` (the tab uses
-`"portal"`); edit their text in the HTML like anything else. Admins don't sign in here: they use the portal's
-own admin address.
+        <h4>
+            EVENT NAME
+        </h4>
 
-## Social links
+        <p>
+            EVENT DESCRIPTION
+        </p>
 
-Facebook, Instagram, X (Twitter), LinkedIn and email links appear twice on every page: in the footer and in
-the floating icons at the bottom right (`<div class="social">`). Update both if a link changes.
+    </div>
 
-## Images
+</div>
+```
 
-`images/` also holds a few files that no page uses yet: the two IIIT logos (`IIIT_Hyderabad.jpg`,
-`iithimages.jpg`) and the AI illustrations (`index.jpg`, `image copy.png`, `image copy 2.png`).
+Replace:
 
-## Styling
+* `left` → use `left` or `right` for timeline position
+* `YYYY-MM-DD` → event date
+* `DD` → sequence number
+* `MONTH YEAR` → displayed date
+* `EVENT STATUS` → event status
+* `EVENT NAME` → event/program name
+* `EVENT DESCRIPTION` → short description
 
-- `css/theme.css` is the old site's stylesheet: Bootstrap 4.6.1 with the hand-drawn borders and the Neucha and
-  Cabin Sketch fonts. Don't edit it.
-- `css/site.css` holds the site-specific pieces: timeline, highlights, carousel frame, medals and difficulty
-  colours.
-- Useful classes: `text-highlight yellow|red|blue|green|pink`, `badge medal gold|silver|bronze|hm|solution`,
-  `badge saffron|green` (team names), and `level-color-00` … `level-color-10` (problem rows, green → red).
+---
 
-## Moving to an IIIT domain
+## 2. About Page – `about.html`
 
-The site can move from `plo-india.github.io/PLO-site/` to an IIIT address at any time. All links inside the
-site are relative, so nothing in the HTML needs to change. Pick one of these:
+### Add a new event/program/section
 
-### Option A: keep GitHub Pages, add an IIIT subdomain (recommended)
+Copy an existing section and replace the required information.
 
-Best for a subdomain such as `plo.iiit.ac.in`. GitHub keeps hosting it, so pushing to `main` still publishes it.
+```html
+<section class="card" style="background: var(--dark-navy); color: var(--accent-yellow); padding: 40px; margin-bottom: 50px;">
 
-1. Ask IIIT's IT/DNS team to add a **CNAME** record: `plo.iiit.ac.in` → `plo-india.github.io`.
-2. In the `plo-india` organization, go to **Settings → Pages → Add a domain** and verify `plo.iiit.ac.in`
-   (IT adds one extra TXT record). This stops anyone else's GitHub account from claiming the domain.
-3. In this repo, go to **Settings → Pages → Custom domain**, enter `plo.iiit.ac.in` and save. GitHub commits a
-   `CNAME` file to `main`; keep that file.
-4. Once the HTTPS certificate is ready (up to a day), tick **Enforce HTTPS**.
+    <div class="grid-2" style="align-items: center;">
 
-GitHub Pages can't serve a sub-path like `ltrc.iiit.ac.in/plo`. For that, use option B.
+        <div>
 
-### Option B: host the files on an IIIT web server
+            <h2>PROGRAM / EVENT NAME</h2>
 
-For an address like `ltrc.iiit.ac.in/plo/`.
+            <p style="color: var(--white);">
+                PROGRAM / EVENT DESCRIPTION
+            </p>
 
-1. Ask the server admins for a folder served at that address.
-2. Copy this repo's files into it (everything except `.git`), or `git clone` the repo there and `git pull` after
-   each update.
-3. Turn off GitHub Pages (repo **Settings → Pages**) or leave a note on it pointing to the new address, so there
-   aren't two live copies drifting apart.
+            <a href="PAGE-OR-LINK.html" class="text-link">
+                MORE INFORMATION ↗
+            </a>
 
-### After either move
+        </div>
 
-- Set `PLO_SITE_URL` on the portal server to the new address (see the `plo-portal` README).
-- Update the link everywhere it's been shared: Facebook, Instagram, X, LinkedIn bios, email signatures, and
-  posters.
-- Put the new address at the top of this README.
+        <div>
+
+            <img src="images/IMAGE-FILE"
+                 alt="IMAGE DESCRIPTION"
+                 style="width: 100%; border-radius: var(--radius-md);">
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+Replace:
+
+* `PROGRAM / EVENT NAME`
+* `PROGRAM / EVENT DESCRIPTION`
+* `PAGE-OR-LINK.html`
+* `MORE INFORMATION`
+* `IMAGE-FILE`
+* `IMAGE DESCRIPTION`
+
+---
+
+## 3. Team Page – `team.html`
+
+### Add a new team member
+
+Copy an existing team member card.
+
+```html
+<div class="card" style="text-align: center;">
+
+    <img src="IMAGE-URL"
+         alt="MEMBER NAME"
+         style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;">
+
+    <h3 style="margin-top: 8px;">
+        MEMBER NAME
+    </h3>
+
+    <span class="badge badge-category">
+        MEMBER ROLE
+    </span>
+
+    <p style="font-size: 0.85rem; color: var(--text-dark); margin-top: 6px;">
+        MEMBER DESCRIPTION
+    </p>
+
+</div>
+```
+
+Replace:
+
+* `IMAGE-URL`
+* `MEMBER NAME`
+* `MEMBER ROLE`
+* `MEMBER DESCRIPTION`
+
+---
+
+## 4. FAQ Page – `faq.html`
+
+### Add a new question
+
+Copy an existing FAQ item.
+
+```html
+<div class="accordion-item">
+
+    <div class="accordion-header">
+        QUESTION
+        <span>▼</span>
+    </div>
+
+    <div class="accordion-body">
+        ANSWER
+    </div>
+
+</div>
+```
+
+Replace:
+
+* `QUESTION`
+* `ANSWER`
+
+---
+
+# 5. Results Page – `results.html`
+
+## Add CAMP Results
+
+Copy an existing CAMP results panel.
+
+```html
+<div class="year-panel" id="YEAR-camp">
+
+    <table class="archive-table">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>PARTICIPANT NAME</td>
+                <td>
+                    <span class="medal gold">MEDAL</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>PARTICIPANT NAME</td>
+                <td>
+                    <span class="medal silver">MEDAL</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>PARTICIPANT NAME</td>
+                <td>
+                    <span class="medal bronze">MEDAL</span>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+```
+
+Replace:
+
+* `YEAR`
+* `PARTICIPANT NAME`
+* `MEDAL`
+
+Available medal classes:
+
+```text
+gold
+silver
+bronze
+hm
+```
+
+---
+
+## Add IOL Results
+
+```html
+<div class="year-panel" id="YEAR-iol">
+
+    <div class="team-heading">
+        TEAM NAME
+    </div>
+
+    <table class="archive-table">
+
+        <tbody>
+
+            <tr>
+                <td>PARTICIPANT NAME</td>
+                <td>
+                    <span class="medal gold">MEDAL</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>PARTICIPANT NAME</td>
+                <td></td>
+            </tr>
+
+            <tr class="leader-row">
+                <td colspan="2">
+                    Team Leader: TEAM LEADER NAME
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+```
+
+Replace:
+
+* `YEAR`
+* `TEAM NAME`
+* `PARTICIPANT NAME`
+* `MEDAL`
+* `TEAM LEADER NAME`
+
+---
+
+# 6. Resources Page – `resources.html`
+
+### Add a new resource
+
+Inside the resources table `<tbody>`, add:
+
+```html
+<tr data-difficulty="DIFFICULTY">
+
+    <td>
+        <a href="RESOURCE-LINK"
+           class="table-title-link"
+           target="_blank">
+            RESOURCE NAME
+        </a>
+    </td>
+
+    <td>CATEGORY</td>
+
+    <td>
+        <a href="SOLUTION-LINK"
+           class="solution-link"
+           target="_blank">
+            Solution to RESOURCE NAME
+        </a>
+    </td>
+
+    <td>AUTHOR NAME</td>
+
+</tr>
+```
+
+Replace:
+
+* `DIFFICULTY`
+* `RESOURCE-LINK`
+* `RESOURCE NAME`
+* `CATEGORY`
+* `SOLUTION-LINK`
+* `AUTHOR NAME`
+
+### Difficulty
+
+Use only:
+
+```text
+easy
+medium
+hard
+expert
+```
+
+### Category
+
+Use:
+
+```text
+Junior
+Senior
+All
+```
+
+---
+
+# 7. Practice Page – `practice.html`
+
+### Add a new practice problem
+
+Copy an existing practice card.
+
+```html
+<div class="card">
+
+    <span class="badge badge-DIFFICULTY">
+        DIFFICULTY
+    </span>
+
+    <span class="badge badge-category">
+        CATEGORY
+    </span>
+
+    <h3 style="margin: 12px 0;">
+        PROBLEM TITLE
+    </h3>
+
+    <p style="color: var(--text-muted); margin-bottom: 16px;">
+        PROBLEM DESCRIPTION
+    </p>
+
+    <button class="btn-primary toggle-answer-btn"
+            style="width: 100%; justify-content: center;">
+        Show Answer & Explanation
+    </button>
+
+    <div class="answer-box">
+        <strong>Answer:</strong> ANSWER<br>
+        <strong>Explanation:</strong> EXPLANATION
+    </div>
+
+</div>
+```
+
+Replace:
+
+* `DIFFICULTY`
+* `CATEGORY`
+* `PROBLEM TITLE`
+* `PROBLEM DESCRIPTION`
+* `ANSWER`
+* `EXPLANATION`
+
+Keep:
+
+```html
+class="toggle-answer-btn"
+```
+
+and:
+
+```html
+class="answer-box"
+```
+
+so the answer functionality continues to work.
+
+---
+
+# 8. Centres Page – `centres.html`
+
+### Add a new centre
+
+Add a new `<tr>` inside the centres table.
+
+```html
+<tr class="centre-item">
+
+    <td>
+        <strong>STATE</strong>
+    </td>
+
+    <td>CITY</td>
+
+    <td>INSTITUTION NAME</td>
+
+    <td>
+        CENTRE ADDRESS
+        <br>
+
+        <em>
+            <strong>Note:</strong>
+            ADDITIONAL INFORMATION
+        </em>
+    </td>
+
+</tr>
+```
+
+Replace:
+
+* `STATE`
+* `CITY`
+* `INSTITUTION NAME`
+* `CENTRE ADDRESS`
+* `ADDITIONAL INFORMATION`
+
+---
+
+# 9. PLO / Linguistics / IOL Pages
+
+The following pages contain information about specific programs:
+
+```text
+plo.html
+lingistics.html
+ilo.html
+```
+
+---
+
+# 10. Images
+
+Store website images inside:
+
+```text
+images/
+```
+
+#
+
+---
+
+# Quick Reference
+
+| Page         | File                | Add / Update                    |
+| ------------ | ------------------- | ------------------------------- |
+| Home         | `index.html`        | Events, timeline, announcements |
+| About        | `about.html`        | Programs / sections             |
+| Team         | `team.html`         | Team members                    |
+| Participants | `participants.html` | Participant information         |
+| Results      | `results.html`      | IOL / Camp results              |
+| Resources    | `resources.html`    | Resources and solutions         |
+| Practice     | `practice.html`     | Practice problems               |
+| Centres      | `centres.html`      | Exam centres                    |
+| FAQ          | `faq.html`          | Questions and answers           |
+| Contact      | `contact.html`      | Contact information             |
+| PLO          | `plo.html`          | PLO information                 |
+| Linguistics  | `lingistics.html`   | Linguistics information         |
+| IOL          | `ilo.html`          | IOL information                 |
+| CSS          | `styles.css`        | Appearance                      |
+| JavaScript   | `script.js`         | Functionality                   |
+
+---
+
+## Important
+
+For normal website updates:
+
+```text
+HTML       → Content
+CSS        → Design / Appearance
+JavaScript → Functionality
+Images     → Photos / Logos
+```
+
+**To add new information, copy the relevant HTML template above and replace the placeholder values with the new information.**

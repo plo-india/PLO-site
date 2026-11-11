@@ -1,10 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <script>location.replace("new/index.html" + location.search + location.hash);</script>
-  <meta http-equiv="refresh" content="0;url=new/index.html">
-  <title>Panini Linguistics Olympiad</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panini Linguistics Olympiad (PLO) | Home</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body></body>
+<body>
+
+    <!-- Dynamic Header Notification -->
+    <div class="top-banner">
+        <span id="banner-text">Loading latest updates...</span>
+        <a href="#" id="banner-link">Learn More</a>
+    </div>
+
+    <!-- Main Navigation Header -->
+   
+<header class="header-nav">
+
+    <!-- Left: PLO + IIITH (mobile only) -->
+    <div class="header-left">
+        <a href="index.html" class="brand-logo">
+            <img src="images/logo.png" alt="PLO Logo" class="plo-logo">
+        </a>
+
+        <!-- Mobile IIITH logo -->
+        <div class="mobile-iiith">
+            <img src="images/iiit-logo.png" alt="IIIT Hyderabad">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="eligibility.html">Eligibility</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="centres.html">Centres</a></li>
+        <li><a href="registration.html">Registration</a></li>
+         <li><a href="results.html">Results</a></li>
+        <li><a href="index.html#footer-contact">Contact</a></li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">Archive ▼</a>
+            <div class="dropdown-content">
+                 <a href="https://ltrc.iiit.ac.in/plo/archives/2026/index.html">2026 Archive</a><a href="https://ltrc.iiit.ac.in/plo/archives/2025/index.html">2025 Archive</a>
+               
+                
+            </div>
+        </li>
+
+        <!-- Desktop organizer -->
+        <li class="version-switch-li">
+            <a href="../new/index.html" class="btn-version-switch">⟶ Switch to new version</a>
+        </li>
+    </ul>
+
+    <!-- Organised by IIIT Hyderabad -->
+    <div class="header-right">
+        <div class="organizer-tag">
+            <span>Organised by</span>
+            <img src="images/iiit-logo.png" alt="IIIT Hyderabad">
+        </div>
+    </div>
+
+</header>
+    <main class="container">
+        <section id="home-heading" style="text-align:center; padding: 32px 0 8px;">
+            <h1>Welcome to The Panini Linguistics Olympiad!</h1>
+        </section>
+        <!-- Hero Section -->
+        <section class="grid-2" style="align-items: center; margin-bottom: 60px;">
+            <div>
+                <span class="page-tag">For curious minds studying 6–12</span>
+                <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 20px;">Solve the language Puzzles <!---- 🧩 --> </h1>
+                <p style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 24px;">
+                    PLO is a fun, exciting, educational, challenging, puzzling, linguistic competition for students studying in grades 6th to 8th (Juniors) and 9th to 12th (Seniors).
+                    This competition helps foster problem solving, computational thinking and appreciation for the linguistic diversity and linguistics in general.
+                </p>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="resources.html" class="btn-primary">Start Practicing →</a>
+                    <!-- <a href="about.html" class="card" style="padding: 10px 20px; font-weight: 700;">How it works</a> -->
+                    <a href="eligibility.html" class="btn-primary">Eligibility</a>
+                    <a href="registration.html" class="btn-primary plo-2027-register-btn">
+                        PLO 2027 Registration is OPEN
+                    </a>
+                </div>
+            </div>
+			   <div class="plo-home-carousel" aria-label="PLO highlights">
+                <div class="plo-home-carousel-viewport">
+                    <div class="plo-home-carousel-track">
+                        <div class="plo-home-carousel-slide is-active">
+                            <img src="images/plo-carousel/PLO-1.jpg"
+                                 alt="PLO linguistics activity presentation">
+                        </div>
+                        <div class="plo-home-carousel-slide">
+                            <img loading="lazy" src="images/plo-carousel/PLO-2.jpg"
+                                 alt="PLO participants and organizers">
+                        </div>
+                        <div class="plo-home-carousel-slide">
+                            <img loading="lazy" src="images/plo-carousel/PLO-3.jpg"
+                                 alt="PLO participants and organizers">
+                        </div>
+                        <div class="plo-home-carousel-slide">
+                            <img loading="lazy" src="images/plo-carousel/PLO-4.jpg"
+                                 alt="PLO participants and organizers">
+                        </div>
+                        <div class="plo-home-carousel-slide">
+                            <img loading="lazy" src="images/plo-carousel/PLO-5.jpg"
+                                 alt="India team at the International Linguistics Olympiad 2026">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="plo-home-carousel-arrow prev" type="button" aria-label="Previous image">&#10094;</button>
+                <button class="plo-home-carousel-arrow next" type="button" aria-label="Next image">&#10095;</button>
+
+                <div class="plo-home-carousel-dots" aria-label="Carousel navigation">
+                    <button class="is-active" type="button" aria-label="Show image 1"></button>
+                    <button type="button" aria-label="Show image 2"></button>
+                    <button type="button" aria-label="Show image 3"></button>
+                    <button type="button" aria-label="Show image 4"></button>
+                    <button type="button" aria-label="Show image 5"></button>
+                </div>
+            </div>
+            <!-- <div style="text-align: center;">
+                <img loading="lazy" src="images/image copy.png" alt="Kids solving language puzzles" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--card-shadow);">
+				<span style="font-size: 10px; color:#888;">Image generated using AI</span>
+            </div> -->
+        </section>
+
+        <!-- Switch to New Version Button -->
+        <div style="text-align: center; margin: 36px 0 24px;">
+            <a href="../new/index.html" class="btn-primary" style="font-size: 1.1rem; padding: 12px 30px;">
+                Try the new website! →
+            </a>
+        </div>
+
+        <!-- PLO 2026-2027 REGISTRATION ANNOUNCEMENT - NEW
+        <section class="plo-2027-announcement">
+            <div class="plo-2027-announcement-content">
+                <span class="plo-2027-badge">PLO 2026-2027 • REGISTRATION OPEN</span>
+                <h2>PLO 2026-2027 Cycle Has Started! </h2>
+                <p class="plo-2027-lead">
+                    Registration for <strong>PLO Round 1</strong> is now open.
+                    Students can register from <strong>19 September to 20 November 2026</strong>.
+                </p>
+
+                <div class="plo-2027-date-grid">
+                    <div>
+                        <span>Registration</span>
+                        <strong>19 Sep – 20 Nov 2026</strong>
+                    </div>
+                    <div>
+                        <span>Round 1 Examination</span>
+                        <strong>29 November 2026</strong>
+                    </div>
+                </div>
+
+                <p>
+                    Registration is available through two tracks based on the
+                    <strong>medium of school education</strong>.
+                </p>
+
+                <div class="plo-2027-track-grid">
+                    <div class="plo-2027-track-card">
+                        <h3>Track 1 – English Medium</h3>
+                        <p>For students whose medium of school education is English.</p>
+                        <strong class="plo-2027-fee">INR 1,180</strong>
+                        <small>INR 1,000 + 18% GST</small>
+                    </div>
+                    <div class="plo-2027-track-card">
+                        <h3>Track 2 – Regional Language Medium</h3>
+                        <p>For students whose medium of school education is an Indian regional language, where non-language subjects are taught in that regional language.</p>
+                        <strong class="plo-2027-fee">INR 354</strong>
+                        <small>INR 300 + 18% GST</small>
+                    </div>
+                </div>
+
+                <p class="plo-2027-note">
+                    <strong>Important:</strong> The required supporting documents differ between the two tracks.
+                    Please review the complete PLO 2027 registration information before registering.
+                </p>
+
+                <a href="plo2027.html" class="btn-primary">View PLO 2027 Registration Details →</a>
+            </div>
+        </section> -->
+
+
+        <!-- PLO 2027 WEBINAR SERIES -->
+        <section class="plo-webinar-home" aria-labelledby="plo-webinar-home-title">
+            <div class="plo-webinar-home-content">
+                <span class="plo-webinar-eyebrow">PLO 2026-2027 WEBINAR SERIES</span>
+                <h2 id="plo-webinar-home-title">Curious About Solving Linguistic Puzzles?</h2>
+                <p>
+                    Join our webinar series to explore the world of linguistics!
+                </p>
+                <div class="plo-webinar-home-details">
+                    <span><i class="far fa-calendar" aria-hidden="true"></i> 26 October 2026</span>
+                    <span><i class="far fa-clock" aria-hidden="true"></i> 8:00 PM onwards</span>
+					<!-- <span><i class="fas fa-video" aria-hidden="true"></i> <a href="https://meet.google.com/ypp-ijts-hue" target="_blank">Join Session</a></span> -->
+	
+					<span><i class="fab fa-youtube" aria-hidden="true"></i> <a href="https://www.youtube.com/watch?v=cbLYPvFX9FI&list=PLHmmZbzs6Qks" target="_blank">View Recording</a></span>
+                </div>
+                <!-- <a href="webinars.html" class="plo-webinar-home-button">Explore the Webinar Series <span aria-hidden="true">→</span></a> -->
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section id="timeline" class="timeline-wrapper">
+            <div class="page-header">
+                <span class="page-tag">PLO Timeline</span>
+                <h2 class="page-title">Journey to the International Olympiad</h2>
+                <p class="page-subtitle">PLO 2026-2027 will have two major selection rounds. Key dates for PLO 2027 Round 1 are listed below.</p>
+            </div>
+
+            <div class="timeline-track">
+                <div class="timeline-spine"></div>
+
+                <!-- Step 1-->
+                <div class="timeline-row left" data-date="2026-11-29"> <!--end date must be entered-->
+                    <div class="timeline-dot"><span>01</span></div>
+                    <div class="timeline-content">
+                     
+                        <span class="timeline-date">19 September 2026</span>
+                        <h4>Round 1 Registration Opens</h4>
+                        <p>This is the first selection round for PLO. Registration closes on 20 November 2026. Top participants from this round will be eligible for Round 2. <!--so don't wait and register!--></p>
+                        <div class="timeline-links">
+                            <a href="registration.html" class="timeline-btn" target="_blank">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Step 2.1 -->
+                <div class="timeline-row right" data-date="2027-01-15"><!--end date must be entered-->
+                    <div class="timeline-dot"><span>02</span></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">29 November, 2026</span>
+                        <h4>Round 1 Examination</h4>
+                        <p>National-level examination for all registered candidates. The examination will be conducted at designated centres across India.</p> <a href="centres.html" class="content-link" target="_blank">View Examination Centres →</a>
+                        <div class="timeline-links">
+                            <a href="registration.html" class="timeline-btn" target="_blank">Register Now</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+				<!-- Step 2.2 -->
+                <div class="timeline-row left" data-date="2027-01-15"><!--end date must be entered-->
+                    <div class="timeline-dot"><span>03</span></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">15 January, 2027</span>
+                        <h4>Round 1 Results</h4>
+                        <p>Round 1 results are announced! Check your scores and rankings.</p>
+                        <div class="timeline-links">
+                            <a href="#" class="timeline-btn" target="_blank">Check Results</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Step 3 -->
+                <!-- <div class="timeline-row right" data-date="2027-04-01"><!--end date must be entered--
+                    <div class="timeline-dot"><span>04</span></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">March - April, 2027</span>
+                        <h4>Round 2 APLO</h4>
+                        <p>Top participants from Round 1 are invited to participate in the Asia Pacific Linguistics Olympiad (APLO) against students from around the world.</p>
+                        <div class="timeline-links">
+                            <a href="about.html" class="timeline-btn" target="_blank">Learn More</a>
+                            <!- <a href="centres.html" class="timeline-btn secondary" target="_blank">Centre Details</a> --
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Step 4 -->
+                <div class="timeline-row right" data-date="2027-06-01"><!--end date must be entered-->
+                    <div class="timeline-dot"><span>05</span></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May - June, 2027</span>
+                        <h4>Round 2 CAMP</h4>
+                        <p>Top participants from Round 1 get to take part in an Invitational Camp in Hyderabad where they learn linguistics and key tips and tricks. </p>
+                    </div>
+                </div>
+                <div class="timeline-row left" data-date="2027-07-21"><!--end date must be entered-->
+                    <div class="timeline-dot"><span>06</span></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">21 - 28 July, 2027</span>
+                        <h4>IOL 2027</h4>
+                        <p>The top participants from Round 2 will travel to Thailand to represent India at the International Linguistics Olympiad (IOL) 2027, competing with the best minds from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Sample Problem Section -->
+        <section class="sample-problem-section">
+            <div class="page-header" style="text-align: center; margin-bottom: 40px;">
+                <h2 class="page-title" style="font-size: 2.2rem; font-weight: 700;">Let's try one problem.</h2>
+                <p class="page-subtitle" style="font-size: 1.2rem; color: #475569;">To get a feel, try this sample problem.</p>
+            </div>
+
+            <div class="sample-problem-container">
+                <div class="sample-problem-image">
+                    <img loading="lazy" src="images/example.png" alt="Sample Linguistics Problem - A Rose by another Name">
+                </div>
+
+                <div class="sample-problem-content">
+                    <div class="hint-text-box" id="hintBox">
+                        <p><strong>K</strong> = outermost green layer</p>
+                        <p><strong>C</strong> = next whorl</p>
+                        <p><strong>A</strong> = next – the yellow dots, and</p>
+                        <p><strong>G</strong> the innermost = orange.</p>
+                        <br>
+                        <p>The number of elements in the whorl is subscripted.</p>
+                        <p>To view the full solution, find this problem on the <a href="resources.html" class="resource-link">Resources Page</a></p>
+                    </div>
+
+                    <button class="hint-toggle-btn" id="toggleHintBtn">Click for a hint!</button>
+
+                    <div class="sample-problem-footer">
+                        <h3>Did you enjoy the problem?</h3>
+                        <p>Try out more and don't forget to participate in the olympiad.</p>
+                    </div>
+                </div>
+            </div>
+            
+<div class="footer-contact" id="footer-contact">
+    <h3>Contact Us</h3>
+
+    <p>Feel free to contact us any time.</p>
+    <p>We will get back to you as soon as we can!</p>
+
+    <a href="mailto:plo@iiit.ac.in" class="contact-mail">
+        plo@iiit.ac.in
+    </a>
+
+    <!-- <div class="coordinators">
+        <h4>Co-ordinators</h4>
+        <p>Manish Shrivastava</p>
+        <p>Parameswari Krishnamurthy</p>
+    </div> -->
+</div>
+    <!-- <div class="coordinators">
+        <strong>Co-ordinators</strong>
+        <p>Manish Shrivastava</p>
+        <p>Parameswari Krishnamurthy</p>
+    </div> -->
+
+        </section>
+    </main>
+     <footer>
+		 <div class="footer-socials">
+        <!-- <a href="https://www.instagram.com/plo_india/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.facebook.com/PaniniLinguisticsOlympiad/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a> -->
+
+        <!-- <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="YOUR_YOUTUBE_LINK" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a> -->
+    </div>
+        <div class="footer-bottom">&copy; 2027 PLO. Built for young thinkers.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

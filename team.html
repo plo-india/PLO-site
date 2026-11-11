@@ -1,10 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <script>location.replace("new/team.html" + location.search + location.hash);</script>
-  <meta http-equiv="refresh" content="0;url=new/team.html">
-  <title>Panini Linguistics Olympiad</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Panini Linguistics Olympiad (PLO)</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body></body>
+<body>
+    <div class="top-banner">
+        <span id="banner-text">Loading updates...</span>
+        <a href="#" id="banner-link">Learn More</a>
+    </div>
+
+    <header class="header-nav">
+    <!-- Left: PLO + IIITH (mobile only) -->
+    <div class="header-left">
+        <a href="index.html" class="brand-logo">
+            <img src="images/logo.png" alt="PLO Logo" class="plo-logo">
+        </a>
+
+        <!-- Mobile IIITH logo -->
+        <div class="mobile-iiith">
+            <img src="images/iiit-logo.png" alt="IIIT Hyderabad">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navMenu">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html"class="active">Team</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="eligibility.html">Eligibility</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="centres.html">Centres</a></li>
+        <li><a href="registration.html">Registration</a></li>
+         <li><a href="results.html">Results</a></li>
+        <li><a href="index.html#footer-contact">Contact</a></li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">Archive ▼</a>
+            <div class="dropdown-content">
+                 <a href="https://ltrc.iiit.ac.in/plo/archives/2026/index.html">2026 Archive</a><a href="https://ltrc.iiit.ac.in/plo/archives/2025/index.html">2025 Archive</a>
+               
+                
+            </div>
+        </li>
+
+        <!-- Desktop organizer -->
+        <li class="version-switch-li">
+            <a href="../new/index.html" class="btn-version-switch">⟶ Switch to new version</a>
+        </li>
+    </ul>
+
+    <!-- Organised by IIIT Hyderabad -->
+    <div class="header-right">
+        <div class="organizer-tag">
+            <span>Organised by</span>
+            <img src="images/iiit-logo.png" alt="IIIT Hyderabad">
+        </div>
+    </div>
+
+</header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">PLO Team</h1>
+            <!-- <p class="page-subtitle">These are the old team details. The updated team information will be added soon.</p> -->
+        </div>
+
+        <!-- ORGANIZERS & LEADERSHIP -->
+        <div class="team-section">
+            <h2 class="team-section-title">Committee</h2>
+            <!-- <p class="team-section-subtitle">Visionaries steering the PLO mission forward</p> -->
+            
+            <div class="grid-4">
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Dr. Anika Rao" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Monojit Choudhury</h3>
+                    <span class="badge badge-category">General Chair</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">MBZUAI</p>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Vikram Singh" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;"> Prof. Manish Shrivastava</h3>
+                    <span class="badge badge-category">General Co-Chair</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIIT Hyderabad</p>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Ms. Priya Sharma" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Dipti Misra Sharma</h3>
+                    <span class="badge badge-category">Advisory Chair</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIIT Hyderabad</p>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Mr. Arjun Kapoor" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Sandipan Dandapat</h3>
+                    <span class="badge badge-category">Program Chair</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> IIT Hyderabad</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Mr. Arjun Kapoor" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Parameswari Krishnamurthy</h3>
+                    <span class="badge badge-category">Organization Chair</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> IIIT Hyderabad</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Mr. Arjun Kapoor" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Dr. Atul Kr. Ojha</h3>
+                    <span class="badge badge-category">Publicity Chair</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> University of Galway</p>
+                </div>
+                 <!-- <div class="card" style="text-align: center;">
+                    <img loading="lazy" src="" alt="Mr. Arjun Kapoor" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> 
+                    <h3 style="margin-top: 8px;">Mr. Praveen</h3>
+                    <span class="badge badge-category">General Administrator</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIIT-Hyderabad</p>
+                </div> -->
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Mr. Arjun Kapoor" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Neha</h3>
+                    <span class="badge badge-category">General Administrator</span>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIIT-Hyderabad</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2 class="team-section-title">Volunteers</h2>
+            <!-- <p class="team-section-subtitle">Crafting puzzles that delight and challenge</p> -->
+            
+            <div class="grid-4">
+ 
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Abhinav P M</h3>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Priyanka Dasari</h3>
+                </div>
+
+
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Vishnuraj</h3>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Aaryan Kashyap</h3>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Amisha</h3>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Navya Shrivastava</h3>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Surya Teja</h3>
+                </div>
+				<div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Vidushi</h3>
+                </div>
+				<div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Vinayak</h3>
+                </div>
+				<div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Meenakshi</h3>
+                </div>
+				<div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Ananya</h3>
+                </div>
+				<div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="" alt="Prof. Dev Malik" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Many more</h3>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="team-section">
+            <h2 class="team-section-title">Center Coordinators</h2>
+            <!-- <p class="team-section-subtitle">Guiding participants to discovery and confidence</p> -->
+            
+            <div class="grid-4">
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=47" alt="Mira Fernandes" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Brijesh Bhatt</h3>
+                    <!-- <span class="badge badge-category">Camp Mentor</span> -->
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">DDU Nadiad</p>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. C. K. Bhensdadia</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> DDU Nadiad</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Dr. Sujoy Sarkar</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">  CIIL Mysuru</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Dr. Sujata Bhujang</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> WRLC, CIIL, Deccan College Pune</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Danish Pruthi</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> IISc Bangalore</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Malhar Kulkarni</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIT Bombay</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Mr. Dhirendra</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> IIT Bombay</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Ashwini Vaidya</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIT Delhi</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Thapasya J</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> IIT Indore</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Rajesh Kumar</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIT Madras</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Anindita Sahoo</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> IIT Madras</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Asif Ekbal</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">IIT Patna</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Prof. Samir Karmakar</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Jadavpur University</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Ms. Anshu Mittal</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> Krishna Public School, Raipur</p>
+                </div>
+                 <div class="card" style="text-align: center;">
+                    <!-- <img loading="lazy" src="https://i.pravatar.cc/150?img=76" alt="Mr. Suresh Kumar" style="width: 90px; height: 90px; border-radius: 50%; margin-bottom: 12px;"> -->
+                    <h3 style="margin-top: 8px;">Mr. Naveen</h3>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"> Rajagiri College of Social Sciences, Kochi</p>
+                </div>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        
+        <div class="footer-bottom">
+            &copy; 2027 PLO. Built for young thinkers.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
