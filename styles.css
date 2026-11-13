@@ -3528,9 +3528,35 @@ footer {
     background: #fee2e2;
     color: #991b1b;
 }
+.plo-webinar-status-past {
+    background: #e0f2fe;
+    color: #0369a1;
+}
 .plo-webinar-status-soon {
     background: #f1f5f9;
     color: #475569;
+}
+.plo-webinar-presenter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 18px;
+    padding: 9px 13px;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    color: #334155;
+}
+.plo-webinar-presenter i {
+    color: #b91c1c;
+}
+.plo-webinar-presenter strong {
+    color: #0f172a;
+}
+.plo-webinar-presenter .presenter-name {
+    color: #475569;
+    font-style: italic;
 }
 .plo-webinar-number {
     color: #64748b;

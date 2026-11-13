@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="PLO Webinar Series — join live sessions to learn how to solve linguistic puzzles and prepare for the Panini Linguistics Olympiad."
+      content="PLO Webinar Series — watch old PLO participants solve and explain old linguistic olympiad problems to prepare for the Panini Linguistics Olympiad."
     />
     <title>Webinars | Panini Linguistics Olympiad</title>
     <link rel="icon" href="favicon.ico" />
@@ -107,9 +107,38 @@
         background: #ff8c8c;
         color: #7b0000;
       }
+      .webinar-badge.past {
+        background: #dbeafe;
+        color: #1e40af;
+      }
       .webinar-badge.soon {
         background: #eee;
         color: #555;
+      }
+      .webinar-presenter {
+        margin: 0 0 16px;
+        padding: 9px 13px;
+        background: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: #334155;
+      }
+      .webinar-presenter p {
+        margin: 0;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .webinar-presenter .fa {
+        color: #c0392b;
+      }
+      .webinar-presenter strong {
+        color: #0f172a;
+      }
+      .webinar-presenter .presenter-name {
+        color: #64748b;
+        font-style: italic;
       }
       .webinar-number {
         font-size: 0.75rem;
@@ -266,106 +295,214 @@
       </nav>
 
       <div class="announce">
-        <span id="banner-text">PLO 2026-2027 Webinar Series</span>
-        <a href="#webinar-01" id="banner-link">See Upcoming →</a>
+        <span id="banner-text">PLO Webinar Series — Problem Solving Archive</span>
+        <a href="#webinar-grid" id="banner-link">Watch Recordings →</a>
       </div>
     </div>
 
     <main class="container">
       <div class="row pad-vertical">
-        <h1>Webinar Series</h1>
+        <h1>Webinar Series: Problem Walkthroughs</h1>
         <p>
-          Curious about how to solve linguistic puzzles? Join our
-          <mark class="text-highlight yellow">webinar series</mark> to discover how languages work
-          and pick up strategies for the
-          <mark class="text-highlight blue">Panini Linguistics Olympiad</mark>.
-          Sessions are free and open to all registered participants!
+          Watch <mark class="text-highlight yellow">old PLO participants</mark> solving and explaining
+          <mark class="text-highlight blue">old linguistic olympiad problems</mark> from the International Linguistics Olympiad (IOL),
+          NACLO, and other national contests. Learn how experienced solvers recognize patterns, break down grammatical rules,
+          and arrive at complete solutions.
         </p>
       </div>
 
-      <!-- Featured / next webinar hero -->
-      <div class="webinar-hero" id="webinar-01">
-        <h1>Curious About Solving Linguistic Puzzles?</h1>
+      <!-- Webinar hero highlight -->
+      <div class="webinar-hero" id="webinars-intro">
+        <h1>Learn from Past Olympians</h1>
         <p>
-          Join us for an introductory session to explore the world of linguistic puzzles
-          and learn more about the Panini Linguistics Olympiad. No prior linguistics
-          knowledge needed — just bring your curiosity!
+          Our webinar series features past PLO participants breaking down challenging linguistics puzzles from previous Olympiads.
+          Each session dives into data exploration, hypothesis testing, and solution deduction step by step.
         </p>
         <div class="webinar-hero-details">
-          <span><i class="fa fa-calendar" aria-hidden="true"></i>19 October 2026</span>
-          <span><i class="fa fa-clock-o" aria-hidden="true"></i>8:30 PM – 9:00 PM IST</span>
-          <span><i class="fa fa-video-camera" aria-hidden="true"></i>Google Meet</span>
+          <span><i class="fa fa-play-circle" aria-hidden="true"></i> 7 Problem-Solving Sessions</span>
+          <span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Old PLO Participants</span>
+          <span><i class="fa fa-trophy" aria-hidden="true"></i> IOL, NACLO &amp; National Puzzles</span>
         </div>
-        <a
-          class="webinar-join-btn"
-          href="https://meet.google.com/kex-yyyg-fsz"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Join Webinar →</a
-        >
+        <a class="webinar-join-btn" href="#webinar-grid" style="background:#2c3e50;">
+          <i class="fa fa-arrow-down" aria-hidden="true"></i> Explore All Sessions
+        </a>
       </div>
 
       <!-- Full series grid -->
-      <div class="webinar-grid">
-        <div class="webinar-card featured">
+      <div class="webinar-grid" id="webinar-grid">
+        <div class="webinar-card">
           <div class="webinar-card-top">
-            <span class="webinar-badge upcoming">Upcoming</span>
+            <span class="webinar-badge past">Past Webinar</span>
             <span class="webinar-number">WEBINAR 01</span>
           </div>
-          <h2>Curious About Solving Linguistic Puzzles?</h2>
-          <p>An introductory session on the world of linguistic puzzles and the PLO.</p>
-          <div class="webinar-info">
-            <p><i class="fa fa-calendar" aria-hidden="true"></i><strong>Date:</strong> 19 October 2026</p>
-            <p><i class="fa fa-clock-o" aria-hidden="true"></i><strong>Time:</strong> 8:30 PM – 9:00 PM IST</p>
-            <p><i class="fa fa-video-camera" aria-hidden="true"></i><strong>Platform:</strong> Google Meet</p>
+          <h2>Burmese Surnames- IOL '09 P3</h2>
+          <p>
+            An old PLO participant solves and explains the Burmese Surnames problem from IOL 2009 (Problem 3), breaking down naming conventions and morphological patterns step by step.
+          </p>
+          <div class="webinar-presenter">
+            <p>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <strong>Presenter:</strong>
+              <span class="presenter-name">[Add Presenter Name]</span>
+            </p>
           </div>
           <a
             class="webinar-join-btn"
-            href="https://meet.google.com/kex-yyyg-fsz"
+            href="https://youtu.be/GG2o8YzpQ14"
             target="_blank"
             rel="noopener noreferrer"
-            >Join Webinar →</a
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Recording →</a
           >
         </div>
 
         <div class="webinar-card">
           <div class="webinar-card-top">
-            <span class="webinar-badge soon">Coming Soon</span>
+            <span class="webinar-badge past">Past Webinar</span>
             <span class="webinar-number">WEBINAR 02</span>
           </div>
-          <h2>Webinar 2</h2>
-          <p>Topic and schedule will be announced soon.</p>
-          <p class="coming-note">Details will be announced soon.</p>
+          <h2>Dzongkha- IOL '25 P1</h2>
+          <p>
+            An old PLO participant walks through Problem 1 on Dzongkha from IOL 2025, deconstructing sentence structures, verb morphology, and analytical problem-solving strategies.
+          </p>
+          <div class="webinar-presenter">
+            <p>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <strong>Presenter:</strong>
+              <span class="presenter-name">[Add Presenter Name]</span>
+            </p>
+          </div>
+          <a
+            class="webinar-join-btn"
+            href="https://youtu.be/lyhffDun_EY"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Recording →</a
+          >
         </div>
 
         <div class="webinar-card">
           <div class="webinar-card-top">
-            <span class="webinar-badge soon">Coming Soon</span>
+            <span class="webinar-badge past">Past Webinar</span>
             <span class="webinar-number">WEBINAR 03</span>
           </div>
-          <h2>Webinar 3</h2>
-          <p>Topic and schedule will be announced soon.</p>
-          <p class="coming-note">Details will be announced soon.</p>
+          <h2>Tariana- Czech LO '19 P2</h2>
+          <p>
+            An old PLO participant solves Problem 2 on Tariana from the 2019 Czech Linguistics Olympiad, uncovering grammatical rules, evidential markers, and prefix systems.
+          </p>
+          <div class="webinar-presenter">
+            <p>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <strong>Presenter:</strong>
+              <span class="presenter-name">[Add Presenter Name]</span>
+            </p>
+          </div>
+          <a
+            class="webinar-join-btn"
+            href="https://youtu.be/u8EOXi6rcEI"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Recording →</a
+          >
         </div>
 
         <div class="webinar-card">
           <div class="webinar-card-top">
-            <span class="webinar-badge soon">Coming Soon</span>
+            <span class="webinar-badge past">Past Webinar</span>
             <span class="webinar-number">WEBINAR 04</span>
           </div>
-          <h2>Webinar 4</h2>
-          <p>Topic and schedule will be announced soon.</p>
-          <p class="coming-note">Details will be announced soon.</p>
+          <h2>Lost in Yerevan- NACLO '10 P3</h2>
+          <p>
+            An old PLO participant deciphers Armenian script and metro map problem 'Lost in Yerevan' from NACLO 2010 (Problem 3), showing how to map phonetics to unknown writing systems.
+          </p>
+          <div class="webinar-presenter">
+            <p>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <strong>Presenter:</strong>
+              <span class="presenter-name">[Add Presenter Name]</span>
+            </p>
+          </div>
+          <a
+            class="webinar-join-btn"
+            href="https://youtu.be/ewyoy-Ax4ug"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Recording →</a
+          >
         </div>
 
         <div class="webinar-card">
           <div class="webinar-card-top">
-            <span class="webinar-badge soon">Coming Soon</span>
+            <span class="webinar-badge past">Past Webinar</span>
             <span class="webinar-number">WEBINAR 05</span>
           </div>
-          <h2>Webinar 5</h2>
-          <p>Topic and schedule will be announced soon.</p>
-          <p class="coming-note">Details will be announced soon.</p>
+          <h2>IOL '05 P2</h2>
+          <p>
+            An old PLO participant tackles Problem 2 from the 2005 International Linguistics Olympiad, demonstrating rigorous deductive reasoning and pattern validation from minimal data.
+          </p>
+          <div class="webinar-presenter">
+            <p>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <strong>Presenter:</strong>
+              <span class="presenter-name">[Add Presenter Name]</span>
+            </p>
+          </div>
+          <a
+            class="webinar-join-btn"
+            href="https://youtu.be/A_KIzv1Ohnc"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Recording →</a
+          >
+        </div>
+
+        <div class="webinar-card">
+          <div class="webinar-card-top">
+            <span class="webinar-badge past">Past Webinar</span>
+            <span class="webinar-number">WEBINAR 06</span>
+          </div>
+          <h2>Soundex Codes- IOL '15 P3</h2>
+          <p>
+            An old PLO participant explains Soundex phonetic algorithms from IOL 2015 (Problem 3), bridging computer science algorithms with phonetic categorization in linguistics.
+          </p>
+          <div class="webinar-presenter">
+            <p>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <strong>Presenter:</strong>
+              <span class="presenter-name">[Add Presenter Name]</span>
+            </p>
+          </div>
+          <a
+            class="webinar-join-btn"
+            href="https://youtu.be/djXmR295-AE"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Recording →</a
+          >
+        </div>
+
+        <div class="webinar-card">
+          <div class="webinar-card-top">
+            <span class="webinar-badge past">Past Webinar</span>
+            <span class="webinar-number">WEBINAR 07</span>
+          </div>
+          <h2>Soundex Codes (Pt 2)- IOL '15 P3</h2>
+          <p>
+            Continuing the Soundex breakdown from IOL 2015 (Problem 3), an old PLO participant demonstrates edge cases, encoding verification, and final problem deductions.
+          </p>
+          <div class="webinar-presenter">
+            <p>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <strong>Presenter:</strong>
+              <span class="presenter-name">[Add Presenter Name]</span>
+            </p>
+          </div>
+          <a
+            class="webinar-join-btn"
+            href="https://youtu.be/JAhW4E2-8BA"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch Recording →</a
+          >
         </div>
       </div>
     </main>
