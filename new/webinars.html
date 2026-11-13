@@ -196,103 +196,7 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand mr-2" href="index.html"><img src="images/logo.png" alt="PLO logo" /></a>
-        <div class="organised-by d-flex align-items-center mr-auto mr-lg-0 order-lg-3">
-          <small class="text-muted mr-1">Organised by</small>
-          <img src="images/iiit-logo.png" alt="IIIT Hyderabad" />
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#mainNav"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse order-lg-2" id="mainNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="nav-participate"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Participate</a
-              >
-              <div class="dropdown-menu" aria-labelledby="nav-participate">
-                <a class="dropdown-item" href="registration.html">Registration</a
-                ><a class="dropdown-item" href="eligibility.html">Eligibility</a
-                ><a class="dropdown-item" href="centres.html">Centres &amp; Exam Day</a
-                ><a class="dropdown-item" href="faq.html">FAQs</a>
-              </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-            <li class="nav-item active"><a class="nav-link" href="webinars.html">Webinars</a></li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="nav-past"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >In the Past</a
-              >
-              <div class="dropdown-menu" aria-labelledby="nav-past">
-                <a class="dropdown-item" href="previous.html">Results Archive</a>
-                <div class="dropdown-divider"></div>
-                <a
-                  class="dropdown-item"
-                  href="../archives/2026/index.html"
-                  target="_blank"
-                  rel="noopener"
-                  >2026 Archive ↗</a
-                ><a
-                  class="dropdown-item"
-                  href="../archives/2025/index.html"
-                  target="_blank"
-                  rel="noopener"
-                  >2025 Archive ↗</a
-                >
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="nav-whatis"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >What is?</a
-              >
-              <div class="dropdown-menu" aria-labelledby="nav-whatis">
-                <a class="dropdown-item" href="olympiad.html#plo">Panini Linguistics Olympiad</a
-                ><a class="dropdown-item" href="olympiad.html#iol">International Linguistics Olympiad</a
-                ><a class="dropdown-item" href="olympiad.html#aplo">Asia Pacific Linguistics Olympiad</a
-                ><a class="dropdown-item" href="linguistics.html">Linguistics</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="team.html">Who we are (Team)</a>
-              </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-          </ul>
-          <a
-            class="btn btn-outline-secondary btn-sm version-switch-btn"
-            href="../index.html"
-          >⟵ Switch to old version</a>
-        </div>
-      </nav>
+      <div id="navbar-container" data-include="navbar.html"></div>
 
       <div class="announce">
         <span id="banner-text">PLO Webinar Series — Problem Solving Archive</span>
@@ -304,7 +208,7 @@
       <div class="row pad-vertical">
         <h1>Webinar Series: Problem Walkthroughs</h1>
         <p>
-          Watch <mark class="text-highlight yellow">old PLO participants</mark> solving and explaining
+          Watch <mark class="text-highlight yellow">past PLO participants</mark> solving and explaining
           <mark class="text-highlight blue">old linguistic olympiad problems</mark> from the International Linguistics Olympiad (IOL),
           NACLO, and other national contests. Learn how experienced solvers recognize patterns, break down grammatical rules,
           and arrive at complete solutions.
@@ -320,7 +224,7 @@
         </p>
         <div class="webinar-hero-details">
           <span><i class="fa fa-play-circle" aria-hidden="true"></i> 7 Problem-Solving Sessions</span>
-          <span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Old PLO Participants</span>
+          <span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Past PLO Participants</span>
           <span><i class="fa fa-trophy" aria-hidden="true"></i> IOL, NACLO &amp; National Puzzles</span>
         </div>
         <a class="webinar-join-btn" href="#webinar-grid" style="background:#2c3e50;">
@@ -336,14 +240,11 @@
             <span class="webinar-number">WEBINAR 01</span>
           </div>
           <h2>Burmese Surnames- IOL '09 P3</h2>
-          <p>
-            An old PLO participant solves and explains the Burmese Surnames problem from IOL 2009 (Problem 3), breaking down naming conventions and morphological patterns step by step.
-          </p>
           <div class="webinar-presenter">
             <p>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <strong>Presenter:</strong>
-              <span class="presenter-name">[Add Presenter Name]</span>
+              <strong>Presenters:</strong>
+              <span class="presenter-name">[Add Presenter Names]</span>
             </p>
           </div>
           <a
@@ -361,14 +262,11 @@
             <span class="webinar-number">WEBINAR 02</span>
           </div>
           <h2>Dzongkha- IOL '25 P1</h2>
-          <p>
-            An old PLO participant walks through Problem 1 on Dzongkha from IOL 2025, deconstructing sentence structures, verb morphology, and analytical problem-solving strategies.
-          </p>
           <div class="webinar-presenter">
             <p>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <strong>Presenter:</strong>
-              <span class="presenter-name">[Add Presenter Name]</span>
+              <strong>Presenters:</strong>
+              <span class="presenter-name">[Add Presenter Names]</span>
             </p>
           </div>
           <a
@@ -386,14 +284,11 @@
             <span class="webinar-number">WEBINAR 03</span>
           </div>
           <h2>Tariana- Czech LO '19 P2</h2>
-          <p>
-            An old PLO participant solves Problem 2 on Tariana from the 2019 Czech Linguistics Olympiad, uncovering grammatical rules, evidential markers, and prefix systems.
-          </p>
           <div class="webinar-presenter">
             <p>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <strong>Presenter:</strong>
-              <span class="presenter-name">[Add Presenter Name]</span>
+              <strong>Presenters:</strong>
+              <span class="presenter-name">[Add Presenter Names]</span>
             </p>
           </div>
           <a
@@ -411,14 +306,11 @@
             <span class="webinar-number">WEBINAR 04</span>
           </div>
           <h2>Lost in Yerevan- NACLO '10 P3</h2>
-          <p>
-            An old PLO participant deciphers Armenian script and metro map problem 'Lost in Yerevan' from NACLO 2010 (Problem 3), showing how to map phonetics to unknown writing systems.
-          </p>
           <div class="webinar-presenter">
             <p>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <strong>Presenter:</strong>
-              <span class="presenter-name">[Add Presenter Name]</span>
+              <strong>Presenters:</strong>
+              <span class="presenter-name">[Add Presenter Names]</span>
             </p>
           </div>
           <a
@@ -436,14 +328,11 @@
             <span class="webinar-number">WEBINAR 05</span>
           </div>
           <h2>IOL '05 P2</h2>
-          <p>
-            An old PLO participant tackles Problem 2 from the 2005 International Linguistics Olympiad, demonstrating rigorous deductive reasoning and pattern validation from minimal data.
-          </p>
           <div class="webinar-presenter">
             <p>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <strong>Presenter:</strong>
-              <span class="presenter-name">[Add Presenter Name]</span>
+              <strong>Presenters:</strong>
+              <span class="presenter-name">[Add Presenter Names]</span>
             </p>
           </div>
           <a
@@ -461,14 +350,11 @@
             <span class="webinar-number">WEBINAR 06</span>
           </div>
           <h2>Soundex Codes- IOL '15 P3</h2>
-          <p>
-            An old PLO participant explains Soundex phonetic algorithms from IOL 2015 (Problem 3), bridging computer science algorithms with phonetic categorization in linguistics.
-          </p>
           <div class="webinar-presenter">
             <p>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <strong>Presenter:</strong>
-              <span class="presenter-name">[Add Presenter Name]</span>
+              <strong>Presenters:</strong>
+              <span class="presenter-name">[Add Presenter Names]</span>
             </p>
           </div>
           <a
@@ -486,14 +372,11 @@
             <span class="webinar-number">WEBINAR 07</span>
           </div>
           <h2>Soundex Codes (Pt 2)- IOL '15 P3</h2>
-          <p>
-            Continuing the Soundex breakdown from IOL 2015 (Problem 3), an old PLO participant demonstrates edge cases, encoding verification, and final problem deductions.
-          </p>
           <div class="webinar-presenter">
             <p>
               <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <strong>Presenter:</strong>
-              <span class="presenter-name">[Add Presenter Name]</span>
+              <strong>Presenters:</strong>
+              <span class="presenter-name">[Add Presenter Names]</span>
             </p>
           </div>
           <a

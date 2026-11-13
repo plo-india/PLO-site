@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await initModularNavbar();
     initDynamicBanner();
     initAccordions();
     initAnswerToggles();
@@ -10,6 +11,78 @@ document.addEventListener('DOMContentLoaded', () => {
     initImageCarousel();
     updateTimeline();
 });
+
+// Modular Navbar Loader
+async function initModularNavbar() {
+    const placeholder = document.getElementById("navbar-placeholder") || document.querySelector('[data-include="navbar.html"]');
+    if (!placeholder) return;
+
+    let html = "";
+    try {
+        const resp = await fetch("navbar.html");
+        if (resp.ok) {
+            html = await resp.text();
+        }
+    } catch (e) {
+        // Fallback if opened via file:// or fetch fails
+        html = `
+<header class="header-nav">
+    <div class="header-left">
+        <a href="index.html" class="brand-logo">
+            <img src="images/logo.png" alt="PLO Logo" class="plo-logo">
+        </a>
+        <div class="mobile-iiith">
+            <img src="images/iiit-logo.png" alt="IIIT Hyderabad">
+        </div>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">☰</button>
+    <ul class="nav-links" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="eligibility.html">Eligibility</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="centres.html">Centres</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="index.html#footer-contact">Contact</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">Archive ▼</a>
+            <div class="dropdown-content">
+                <a href="archives/2026/index.html">2026 Archive</a>
+                <a href="archives/2025/index.html">2025 Archive</a>
+            </div>
+        </li>
+        <li class="version-switch-li">
+            <a href="new/index.html" class="btn-version-switch">⟶ Switch to new version</a>
+        </li>
+    </ul>
+    <div class="header-right">
+        <div class="organizer-tag">
+            <span>Organised by</span>
+            <img src="images/iiit-logo.png" alt="IIIT Hyderabad">
+        </div>
+    </div>
+</header>`;
+    }
+
+    if (html) {
+        placeholder.outerHTML = html;
+    }
+
+    // Highlight current page
+    const path = window.location.pathname;
+    const page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        const href = a.getAttribute('href');
+        if (href === page || (page === '' && href === 'index.html')) {
+            a.classList.add('active');
+        } else {
+            a.classList.remove('active');
+        }
+    });
+}
 
 /* Once initial page load finishes, warm up remaining carousel slides
    in the background so each is loaded before auto-rotation */
