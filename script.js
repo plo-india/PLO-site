@@ -22,6 +22,8 @@ async function initModularNavbar() {
         const resp = await fetch("navbar.html");
         if (resp.ok) {
             html = await resp.text();
+        } else {
+            throw new Error(`Failed to fetch navbar.html (status: ${resp.status})`);
         }
     } catch (e) {
         // Fallback if opened via file:// or fetch fails
@@ -76,7 +78,8 @@ async function initModularNavbar() {
     const page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(a => {
         const href = a.getAttribute('href');
-        if (href === page || (page === '' && href === 'index.html')) {
+        const isActive = href === page || (page === '' && href === 'index.html') || (page === 'webinars.html' && href === 'resources.html');
+        if (isActive) {
             a.classList.add('active');
         } else {
             a.classList.remove('active');

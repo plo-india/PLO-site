@@ -25,6 +25,8 @@ async function initModularNavbar() {
     const resp = await fetch("navbar.html");
     if (resp.ok) {
       html = await resp.text();
+    } else {
+      throw new Error(`Failed to fetch navbar.html (status: ${resp.status})`);
     }
   } catch (e) {
     // Fallback if opened via file:// or fetch fails
@@ -145,7 +147,7 @@ async function initModularNavbar() {
 
   const isHome = page === "" || page === "index.html";
   const isParticipate = ["registration.html", "eligibility.html", "centres.html", "faq.html"].includes(page);
-  const isResources = page === "resources.html";
+  const isResources = ["resources.html", "webinars.html"].includes(page);
   const isPast = ["previous.html"].includes(page);
   const isWhatIs = ["olympiad.html", "linguistics.html", "team.html"].includes(page);
   const isResults = page === "results.html";
