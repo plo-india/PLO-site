@@ -179,11 +179,11 @@ async function initModularNavbar() {
 /* ---------------------------------------------------------
    Hall ticket & results portal (the private plo-portal backend).
    Once it's live, put its address here:
-     - "/portal" when the portal runs on the same domain as this site (one IIIT server), or
+     - "/plo/portal" when the portal runs on the same domain as this site (under /plo/portal), or
      - a full address such as "https://plo-portal.iiit.ac.in" when it has its own domain.
    Leave it empty and the site never shows the Sign in tab or any hall ticket/results notices.
 --------------------------------------------------------- */
-const PORTAL_URL = "/portal";
+const PORTAL_URL = "/vi_plo_test/portal";
 
 /* Ask the portal what's been released, then update the page:
    - data-portal-show="portal" (the navbar "Sign in" tab) appears while hall tickets or results are released;
