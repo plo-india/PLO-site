@@ -183,7 +183,7 @@ async function initModularNavbar() {
      - a full address such as "https://plo-portal.iiit.ac.in" when it has its own domain.
    Leave it empty and the site never shows the Sign in tab or any hall ticket/results notices.
 --------------------------------------------------------- */
-const PORTAL_URL = "/vi_plo_test/portal";
+const PORTAL_URL = "/plo/portal";
 
 /* Ask the portal what's been released, then update the page:
    - data-portal-show="portal" (the navbar "Sign in" tab) appears while hall tickets or results are released;
