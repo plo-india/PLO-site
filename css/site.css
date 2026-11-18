@@ -613,3 +613,8 @@ form.form-inline {
   font-size: 1.15rem;
   margin-top: -6px;
 }
+
+/* Walk-in registration notice under the hall ticket notice */
+.walk-in-notice {
+  font-size: 1.2rem;
+}

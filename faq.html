@@ -1,112 +1,333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- Old version: forwards to the new site. The old page below is kept, but no longer shown. -->
-  <script>location.replace("new/faq.html" + location.search + location.hash);</script>
-  <meta http-equiv="refresh" content="0;url=new/faq.html">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ </title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="top-banner">
-        <span id="banner-text">Loading updates...</span>
-        <a href="#" id="banner-link">Learn More</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PLO is a fun, exciting, educational, challenging, puzzling, linguistic competition for school students! Celebrate Linguistics and problem solving!"
+    />
+    <title>FAQs | Panini Linguistics Olympiad</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="navbar-container" data-include="navbar.html"></div>
+
+      <div class="announce">
+        <span id="banner-text">PLO 2026-2027 Registration is OPEN — Last date <del>31 October 2026</del> 20 November 2026!</span>
+        <a href="registration.html" id="banner-link">Register Now →</a>
+      </div>
     </div>
 
-    <div id="navbar-placeholder" data-include="navbar.html"></div>
+    <main class="container">
+      <section class="page-section">
+        <h1>FAQs</h1>
+        <p class="lead-center">
+          Here are some <strong>frequently asked questions</strong> about the contest:
+        </p>
 
-    <main class="container" style="max-width: 800px;">
-        <div class="page-header">
-            <!-- <span class="page-tag">Questions welcome</span> -->
-            <h1 class="page-title">No question is too small.❓</h1>
-           
-            <p class="page-subtitle">Here are a few things children, parents, and teachers ask before their first PLO adventure.</p>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">How does a student register for the competition? <span>▼</span></div>
-            
-            <div class="accordion-body"> <ul class="link-list">
-                 <li><a href="https://payments.iiit.ac.in/plo2027/registration.php" target="_blank">Individual Registration ↗</a></li>
-                 
-                 <li><a href="https://payments.iiit.ac.in/plo2027/registration_group.php" target="_blank">Group Registration ↗</a></li>
-            </ul></div>
-        </div>
-        <div class="accordion-item">
-            <div class="accordion-header">What knowledge and skills do I need? <span>▼</span></div>
-            <div class="accordion-body"><ul><li><strong>In short:</strong> You definitely need a fresh brain, couple of pencils and pens and a lot of patience!</li>
-<br><li><strong>Long version: </strong> You mostly need logical thinking, as well as general awareness of directions, calendars, etc. You do not need prior knowledge of linguistics, computer science, programming, or foreign languages.</li></ul></div>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header"> How long is the Round 1 contest?<span>▼</span></div>
-            <div class="accordion-body">The contest will last for 4 hours.</div>
-        </div>
-        <div class="accordion-item">
-            <div class="accordion-header">What is the registration fee? <span>▼</span></div>
-            <div class="accordion-body">
-                <ul>
-                    <li>Single Registration for Track1 (Regular) costs ₹1000 + ₹180(GST), <strong>totaling ₹1180</strong></li>
-                    <li>Single Registration for Track2 (Access) costs ₹300 + ₹54(GST), <strong>totaling ₹354</strong></li>
-                <li class="link-list"><a  href="https://payments.iiit.ac.in/plo2027/registration_group.php" target="_blank">Group Registration ↗</a></li>
-                </ul>
+        <div class="accordion" id="faq">
+          <div class="card">
+            <div class="card-header" id="q1">
+              <button
+                class="btn btn-link"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a1"
+                aria-expanded="true"
+                aria-controls="a1"
+              >
+                How does a student <strong>register</strong> for the competition?
+              </button>
             </div>
+            <div id="a1" class="collapse show" aria-labelledby="q1" data-parent="#faq">
+              <div class="card-body">
+                Head to the <a href="registration.html">Registration page</a> to choose a track, or go
+                straight to
+                <a href="https://payments.iiit.ac.in/plo2027/registration.php" target="_blank" rel="noopener"
+                  >Individual Registration</a
+                >
+                or
+                <a
+                  href="https://payments.iiit.ac.in/plo2027/registration_group.php"
+                  target="_blank"
+                  rel="noopener"
+                  >Group Registration</a
+                >.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q2">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a2"
+                aria-expanded="false"
+                aria-controls="a2"
+              >
+                What <strong>knowledge and skills</strong> do I need?
+              </button>
+            </div>
+            <div id="a2" class="collapse" aria-labelledby="q2" data-parent="#faq">
+              <div class="card-body">
+                <p>
+                  <strong>In short:</strong> You definitely need a fresh brain, a couple of pencils and pens
+                  and a lot of patience!
+                </p>
+                <p class="mb-0">
+                  <strong>Longer version:</strong> You mostly need logical thinking, as well as general
+                  awareness of directions, calendars, etc. You do not need prior knowledge of linguistics,
+                  computer science, programming, or foreign languages.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q3">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a3"
+                aria-expanded="false"
+                aria-controls="a3"
+              >
+                How <strong>long</strong> is the Round 1 contest?
+              </button>
+            </div>
+            <div id="a3" class="collapse" aria-labelledby="q3" data-parent="#faq">
+              <div class="card-body">The contest will last for 4 hours.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q4">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a4"
+                aria-expanded="false"
+                aria-controls="a4"
+              >
+                What is the <strong>registration fee</strong>?
+              </button>
+            </div>
+            <div id="a4" class="collapse" aria-labelledby="q4" data-parent="#faq">
+              <div class="card-body">
+                <ul class="mb-0">
+                  <li>Track 1 (Regular): ₹1,000 + ₹180 GST, totalling <strong>₹1,180</strong></li>
+                  <li>Track 2 (Access): ₹300 + ₹54 GST, totalling <strong>₹354</strong></li>
+                  <li>
+                    Group registration: discounts of 10–20% for 10 or more students. See
+                    <a href="registration.html">Registration</a>.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q5">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a5"
+                aria-expanded="false"
+                aria-controls="a5"
+              >
+                Can students who have completed Class 12 or are repeating Class 12 participate?
+              </button>
+            </div>
+            <div id="a5" class="collapse" aria-labelledby="q5" data-parent="#faq">
+              <div class="card-body">
+                Contestants must:
+                <ul class="mb-0">
+                  <li>be under 20 years of age on the opening day of the IOL; and</li>
+                  <li>
+                    be currently attending secondary school (high school) or a lower grade, or have only
+                    recently completed secondary school.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q6">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a6"
+                aria-expanded="false"
+                aria-controls="a6"
+              >
+                Can I get a <strong>refund</strong> if I can’t attend after registering?
+              </button>
+            </div>
+            <div id="a6" class="collapse" aria-labelledby="q6" data-parent="#faq">
+              <div class="card-body">Unfortunately, no. Registration fees are non-refundable.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q7">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a7"
+                aria-expanded="false"
+                aria-controls="a7"
+              >
+                How many <strong>problems</strong> should I expect?
+              </button>
+            </div>
+            <div id="a7" class="collapse" aria-labelledby="q7" data-parent="#faq">
+              <div class="card-body">Expect around 6–8 problems in the contest booklet.</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q8">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a8"
+                aria-expanded="false"
+                aria-controls="a8"
+              >
+                Where can I find <strong>example problems</strong> and related reading materials?
+              </button>
+            </div>
+            <div id="a8" class="collapse" aria-labelledby="q8" data-parent="#faq">
+              <div class="card-body">
+                You can find past problems, graded by difficulty, and some reading materials on the
+                <a href="resources.html">Resources page</a>. Note that these are not required reading to
+                participate. You can find even more problems on the websites of the other Linguistics
+                Olympiads listed there, or by surfing the web. 😉
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q9">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a9"
+                aria-expanded="false"
+                aria-controls="a9"
+              >
+                Can the same email ID be used for <strong>multiple registrations</strong>?
+              </button>
+            </div>
+            <div id="a9" class="collapse" aria-labelledby="q9" data-parent="#faq">
+              <div class="card-body">
+                No. Each registration must be made using a unique email ID. The same email ID cannot be used
+                for multiple registrations.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="q10">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#a10"
+                aria-expanded="false"
+                aria-controls="a10"
+              >
+                What happens if I register <strong>after 10 November 2026</strong>?
+              </button>
+            </div>
+            <div id="a10" class="collapse" aria-labelledby="q10" data-parent="#faq">
+              <div class="card-body">
+                Registration is open until 20 November 2026. However, participants whose registrations are
+                received after 10 November will be accommodated through the walk-in arrangement. Examination
+                centres will be confirmed only for registrations received on or before 10 November 2026.
+              </div>
+            </div>
+          </div>
         </div>
-		<div class="accordion-item">
-			<div class="accordion-header">
-				What happens if I register after 10 November 2026?
-				<span>▼</span>
-			</div>
-			<div class="accordion-body">
-				Registration is open until 20 November 2026.
-				However, participants whose registrations are received
-				after 10 November will be accommodated through the
-				walk-in arrangement. Examination centres will be
-				confirmed only for registrations received on or before
-				10 November 2026.
-			</div>
-</div>
-		<div class="accordion-item">
-			<div class="accordion-header">Can the same email ID be used for multiple registrations? <span>▼</span></div>
-			<div class="accordion-body">
-				<p> No. Each registration must be made using a unique email ID. The same email ID cannot be used for multiple registrations.</p>
-			</div>
-		</div>
-		<div class="accordion-item">
-            <div class="accordion-header"> Can students who have completed Class 12 or are repeating Class 12 participate?<span>▼</span></div>
-            <div class="accordion-body">Contestants must:<br>
-				<ol>
-				<li> Be under 20 years of age on the opening day of the IOL; and</li>
-				<li> Be currently attending secondary school (high school) or a lower grade, or have only recently completed secondary school.</li>
-				</ol>
-			</div>
-        </div>
-        <div class="accordion-item">
-            <div class="accordion-header">Can I get a refund if I can’t attend after registering? <span>▼</span></div>
-            <div class="accordion-body">Unfortunately, no. Registration fees are non-refundable.</div>
-        </div>
-        <div class="accordion-item">
-            <div class="accordion-header">How many problems should I expect? <span>▼</span></div>
-            <div class="accordion-body">Expect around 6–8 problems in the contest booklet.</div>
-        </div>
-        <div class="accordion-item">
-            <div class="accordion-header">Where can I find example problems and related reading materials?<span>▼</span></div>
-            <div class="accordion-body"><ul>
-                <li> You can find some reading materials under the Resources tab.</li>
-                <li> Note that these are not required reading to participate.</li>
-                    
-                <li> You can also find past problems under the Resources tab.</li>
-                    
-                <li> You can find even more problems by going to the other Linguistics Olympiads section below or by surfing the web. 😉</li>
-            </ul></div>
-        </div>
+      </section>
     </main>
 
-    <footer>
-        <div class="footer-bottom">&copy; 2027 PLO. Built for young thinkers.</div>
-    </footer>
-    <script src="script.js"></script>
-</body>
+    <div class="container">
+      <footer class="site-footer" id="contact">
+        <h3>Contact Us</h3>
+        <p>Feel free to contact us any time. We will get back to you as soon as we can!</p>
+        <p><a href="mailto:plo@iiit.ac.in">plo@iiit.ac.in</a></p>
+        <p>
+          <a href="https://www.facebook.com/PaniniLinguisticsOlympiad/" target="_blank" rel="noopener"
+            >Facebook</a
+          >
+          · <a href="https://www.instagram.com/plo_india/" target="_blank" rel="noopener">Instagram</a> ·
+          <a href="https://x.com/OlympiadPanini" target="_blank" rel="noopener">X (Twitter)</a> ·
+          <a href="https://www.linkedin.com/company/paninilingoly" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </footer>
+    </div>
+
+    <div class="social">
+      <div id="social-facebook">
+        <a
+          href="https://www.facebook.com/PaniniLinguisticsOlympiad/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+          ><i class="fa fa-facebook-square"></i
+        ></a>
+      </div>
+      <div id="social-instagram">
+        <a href="https://www.instagram.com/plo_india/" target="_blank" rel="noopener" aria-label="Instagram"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </div>
+      <div id="social-x">
+        <a href="https://x.com/OlympiadPanini" target="_blank" rel="noopener" aria-label="X (Twitter)"
+          ><svg class="x-logo" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+            /></svg
+        ></a>
+      </div>
+      <div id="social-linkedin">
+        <a
+          href="https://www.linkedin.com/company/paninilingoly"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          ><i class="fa fa-linkedin-square"></i
+        ></a>
+      </div>
+      <div id="social-email">
+        <a href="mailto:plo@iiit.ac.in" aria-label="Email"><i class="fa fa-envelope-square"></i></a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js"></script>
+  </body>
 </html>

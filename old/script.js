@@ -57,7 +57,7 @@ async function initModularNavbar() {
             </div>
         </li>
         <li class="version-switch-li">
-            <a href="new/index.html" class="btn-version-switch">⟶ Switch to new version</a>
+            <a href="../index.html" class="btn-version-switch">⟶ Switch to new version</a>
         </li>
     </ul>
     <div class="header-right">
