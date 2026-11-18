@@ -1,0 +1,16 @@
+/* The old site used to load this file. If a saved old page shows up for a moment before script.js
+   reloads it, keep it from looking broken: no full-size logos, no bare bullet-list menu. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+nav img,
+.navbar img,
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+nav ul,
+.navbar ul {
+  display: none;
+}
