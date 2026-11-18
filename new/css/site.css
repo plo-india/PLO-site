@@ -607,3 +607,9 @@ form.form-inline {
     padding: 18px;
   }
 }
+
+/* "Welcome to our new website" line under the home page heading */
+.new-site-note {
+  font-size: 1.15rem;
+  margin-top: -6px;
+}

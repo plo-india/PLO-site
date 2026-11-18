@@ -129,10 +129,6 @@ async function initModularNavbar() {
       hidden
       >Sign in</a
     >
-    <a
-      class="btn btn-outline-secondary btn-sm version-switch-btn"
-      href="../index.html"
-    >⟵ Switch to old version</a>
   </div>
 </nav>`;
   }
