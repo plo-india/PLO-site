@@ -225,8 +225,9 @@ async function initPortal() {
     link.textContent = "Sign in to see yours →";
     link.href = base + "/";
   } else if (isOpen.hall_tickets) {
-    text.textContent = "Hall tickets for PLO 2027 Round 1 are out!";
-    link.textContent = "Sign in to download yours →";
+    text.textContent =
+      "Hall tickets for PLO 2027 Round 1 have been released for candidates who submitted the centre selection form by 17 November 2026.";
+    link.textContent = "Download your hall ticket →";
     link.href = base + "/";
   }
 }
