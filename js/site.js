@@ -281,7 +281,7 @@ function initBanner() {
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "Round 1 is on 29 November 2026, 9:00 AM to 1:00 PM. Missed online registration? Walk-in registration is available at the examination centres.";
+    msg = "Round 1 is on 29 November 2026, 10:00 AM to 2:00 PM. Missed online registration? Walk-in registration is available at the examination centres.";
     label = "Exam-day details →";
     href = "centres.html";
   } else if (t < d.results) {
