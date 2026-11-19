@@ -281,7 +281,7 @@ function initBanner() {
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "<strong>Updated timing:</strong> Round 1 on 29 November 2026 is from 10:00 AM to 2:00 PM (report by 9:30 AM). Any earlier mention of 9:00 AM is out of date.";
+    msg = "<strong>Updated timing:</strong> Round 1 on 29 November 2026 is from 10:00 AM to 2:00 PM (report by 9:30 AM).";
     label = "Exam-day details →";
     href = "centres.html";
   } else if (t < d.results) {
