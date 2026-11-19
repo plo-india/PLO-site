@@ -222,7 +222,7 @@ async function initPortal() {
     link.href = base + "/";
   } else if (isOpen.hall_tickets) {
     text.textContent =
-      "PLO 2027 Round 1 hall tickets are out! Everyone who has paid can now sign in: download your hall ticket, or choose your examination centre if you haven't yet. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
+      "PLO 2027 Round 1 hall tickets are out! Everyone who registered before 18 November 2026 can now sign in: download your hall ticket, or choose your examination centre if you haven't yet. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
     link.textContent = "Sign in →";
     link.href = base + "/";
   }
