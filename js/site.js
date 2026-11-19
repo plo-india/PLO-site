@@ -277,11 +277,11 @@ function initBanner() {
     label = "View Timeline →";
     href = "index.html#home-timeline";
   } else if (t <= d.registrationEnd) {
-    msg = "PLO 2026-2027 Registration is OPEN — Last date <del>31 October 2026</del> 20 November 2026!";
+    msg = "PLO 2026-2027 Registration is OPEN — Last date <del>31 October 2026</del> 20 November 2026! <strong>Updated exam timing:</strong> 10:00 AM to 2:00 PM, report by 9:30 AM.";
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "Round 1 is on 29 November 2026, 10:00 AM to 2:00 PM. Missed online registration? Walk-in registration is available at the examination centres.";
+    msg = "<strong>Updated timing:</strong> Round 1 on 29 November 2026 is from 10:00 AM to 2:00 PM (report by 9:30 AM). Any earlier mention of 9:00 AM is out of date.";
     label = "Exam-day details →";
     href = "centres.html";
   } else if (t < d.results) {
