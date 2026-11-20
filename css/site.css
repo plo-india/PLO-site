@@ -393,6 +393,16 @@ form.form-inline {
 .level-color {
   text-align: center;
 }
+/* Problems whose difficulty level hasn't been decided yet: pale version of the blue (cyan) highlight */
+.level-color-undecided,
+.level-color-undecided > td,
+.level-color-undecided > th {
+  background-color: #c2fdf5;
+}
+.level-undecided-heading > th {
+  font-weight: 700;
+  border-top: 2px solid #333;
+}
 .pad-vertical {
   padding-top: 40px;
   padding-bottom: 40px;
