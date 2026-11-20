@@ -6,6 +6,7 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   await initModularNavbar();
+  initRegistration();
   initBanner();
   initTimeline();
   initHint();
@@ -252,6 +253,33 @@ const DATES = {
   iolEnd: "2027-07-28",
 };
 
+/* Online registration closes at this exact moment (India time). Until then, elements marked
+   data-registration="open" show and data-registration="closed" ones stay hidden; afterwards they swap.
+   A page left open across the deadline swaps by itself. */
+const REGISTRATION_CLOSES = new Date("2026-11-20T23:59:00+05:30");
+
+function registrationOpen() {
+  return Date.now() < REGISTRATION_CLOSES.getTime();
+}
+
+function initRegistration() {
+  const open = registrationOpen();
+  document.querySelectorAll("[data-registration]").forEach((el) => {
+    el.hidden = (el.dataset.registration === "open") !== open;
+  });
+  if (open) {
+    const wait = REGISTRATION_CLOSES.getTime() - Date.now() + 1000;
+    if (wait < 2 ** 31 - 1) {
+      setTimeout(() => {
+        initRegistration();
+        // Only replace the strip if it still shows the registration message (the portal may have taken it over).
+        const link = document.getElementById("banner-link");
+        if (link && link.getAttribute("href") === "registration.html") initBanner();
+      }, wait);
+    }
+  }
+}
+
 function day(s) {
   return new Date(s + "T00:00:00");
 }
@@ -276,13 +304,13 @@ function initBanner() {
     msg = "PLO 2026-2027 Registration opens 19 September 2026!";
     label = "View Timeline →";
     href = "index.html#home-timeline";
-  } else if (t <= d.registrationEnd) {
+  } else if (registrationOpen()) {
     msg = "PLO 2026-2027 Registration is OPEN — Last date <del>31 October 2026</del> 20 November 2026! <strong>Updated exam timing:</strong> 10:00 AM to 2:00 PM, report by 9:30 AM.";
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "<strong>Updated timing:</strong> Round 1 on 29 November 2026 is from 10:00 AM to 2:00 PM (report by 9:30 AM).";
-    label = "Exam-day details →";
+    msg = "PLO 2026-2027 online registration has closed. Not registered? Walk-in registration is available at your examination centre on 29 November 2026. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
+    label = "Find your centre →";
     href = "centres.html";
   } else if (t < d.results) {
     msg = "Round 1 is over. Results will be announced on 15 January 2027.";

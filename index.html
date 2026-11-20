@@ -36,10 +36,12 @@
           <span class="text-highlight blue">Welcome to our new website!</span> We hope you enjoy finding your way around.
         </p>
         <p class="lead-center">
-          The <strong>PLO 2026-2027</strong> cycle has started! Registration for <strong>Round 1</strong> is
-          open from <strong>19 September to 20 November 2026</strong>, and the Round 1 examination will be held
+          The <strong>PLO 2026-2027</strong> cycle has started!
+          <span data-registration="open">Registration for <strong>Round 1</strong> is
+          open from <strong>19 September to 20 November 2026</strong>, and the</span><span data-registration="closed" hidden>Online registration for
+          <strong>Round 1</strong> closed on <strong>20 November 2026</strong>. The</span> Round 1 examination will be held
           on <strong>29 November 2026</strong>, from <strong>10:00 AM to 2:00 PM</strong>, at centres across India. Head to the
-          <a href="registration.html">registration page</a> for fees and tracks, and to the
+          <a href="registration.html">registration page</a> for fees<span data-registration="open"> and tracks</span><span data-registration="closed" hidden> and walk-in registration</span>, and to the
           <a href="eligibility.html">eligibility page</a> to check which contest you can take.
         </p>
       </section>
@@ -186,14 +188,20 @@
 
       <section id="home-registration" class="page-section">
         <h1>Registration</h1>
-        <p class="lead-center">
+        <p class="lead-center" data-registration="closed" hidden>
+          Online registration for PLO 2027 Round 1 closed on <strong>20 November 2026</strong>. If you have not
+          registered, you can still register in person (walk-in) at your examination centre on the day of the
+          exam, <strong>29 November 2026</strong>.
+        </p>
+        <p class="lead-center" data-registration="open">
           Students can register through one of three tracks: <strong>Regular</strong>, for English-medium
           students; <strong>Access</strong>, for regional-language-medium students, students from lower-income
           families and JNV students; and <strong>Group</strong>, for schools registering 10 or more students
           together.
         </p>
         <p class="text-center">
-          <a class="btn btn-primary btn-lg" href="registration.html">Go to Registration →</a>
+          <a class="btn btn-primary btn-lg" href="registration.html" data-registration="open">Go to Registration →</a>
+          <a class="btn btn-primary btn-lg" href="centres.html" data-registration="closed" hidden>Find your centre →</a>
         </p>
       </section>
 
@@ -225,8 +233,8 @@
             <h4>Round 1 Registration Opens!</h4>
             <p class="when">19 September 2026</p>
             <p>
-              Registration for the first selection round closes on <strong>20 November 2026</strong>.
-              <a href="registration.html">Register now</a>.
+              Registration for the first selection round <span data-registration="open">closes</span><span data-registration="closed" hidden>closed</span> on <strong>20 November 2026</strong>.
+              <a href="registration.html" data-registration="open">Register now</a><span data-registration="open">.</span>
             </p>
           </div>
           <div class="timeline-event right" data-date="2026-11-29">
