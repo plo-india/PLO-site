@@ -224,7 +224,7 @@ async function initPortal() {
   } else if (isOpen.hall_tickets) {
     text.textContent = registrationOpen()
       ? "PLO 2027 Round 1 hall tickets are out! Everyone who registered before 18 November 2026 can now sign in: download your hall ticket, or choose your examination centre if you haven't yet. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM."
-      : "PLO 2027 Round 1 hall tickets are out! Sign in to download yours. Haven't chosen your examination centre yet? The last day to choose is 24 November 2026. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
+      : "PLO 2027 Round 1 hall tickets are out! Everyone who registered before 18 November 2026 can now sign in and download theirs. Haven't chosen your examination centre yet? The last day to choose is 24 November 2026. Registered later? You'll be able to sign in once we've added you. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
     link.textContent = "Sign in →";
     link.href = base + "/";
   }
@@ -310,7 +310,7 @@ function initBanner() {
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "PLO 2026-2027 online registration has closed. Registered but no centre yet? The last day to choose one on the portal is 24 November 2026. Not registered? Walk-in registration (Regular track only) is available at your examination centre on 29 November 2026.";
+    msg = "PLO 2026-2027 online registration has closed. Registered before 18 November but no centre yet? The last day to choose one on the portal is 24 November 2026. Not registered? Walk-in registration (Regular track only) is available at your examination centre on 29 November 2026.";
     label = "Find your centre →";
     href = "centres.html";
   } else if (t < d.results) {
