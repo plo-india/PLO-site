@@ -309,7 +309,7 @@ function initBanner() {
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "PLO 2026-2027 online registration has closed. Not registered? Walk-in registration is available at your examination centre on 29 November 2026. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
+    msg = "PLO 2026-2027 online registration has closed. Not registered? Walk-in registration (Regular track only) is available at your examination centre on 29 November 2026. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
     label = "Find your centre →";
     href = "centres.html";
   } else if (t < d.results) {
