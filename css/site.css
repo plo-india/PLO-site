@@ -399,6 +399,53 @@ form.form-inline {
 .level-color-undecided > th {
   background-color: #c2fdf5;
 }
+/* Difficulty buttons and order above the problems table */
+.rsc-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px 12px;
+}
+.rsc-levels-label,
+.rsc-order label {
+  font-weight: 700;
+  margin: 0;
+}
+.rsc-level {
+  border: 2px solid #333;
+  padding: 3px 14px;
+}
+.rsc-level[data-level="all"] {
+  background-color: #fff;
+}
+/* Same colours as the table rows (theme.css), which Bootstrap's .btn would otherwise override */
+.rsc-level[data-level="00"] { background-color: #b2ffb2; }
+.rsc-level[data-level="02"] { background-color: #ecffb2; }
+.rsc-level[data-level="04"] { background-color: #fcffb2; }
+.rsc-level[data-level="06"] { background-color: #ffecb2; }
+.rsc-level[data-level="08"] { background-color: #ffd2b2; }
+.rsc-level[data-level="10"] { background-color: #ffb2b2; }
+.rsc-level[data-level="undecided"] { background-color: #c2fdf5; }
+.rsc-level[aria-pressed="true"] {
+  font-weight: 700;
+  box-shadow: 0 0 0 2px #333;
+}
+.rsc-order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px 20px;
+}
+.rsc-order .custom-select {
+  width: auto;
+}
+.rsc-count {
+  color: #555;
+}
 .level-undecided-heading > th {
   font-weight: 700;
   border-top: 2px solid #333;

@@ -378,23 +378,61 @@ function initResourcesTable() {
   if (!table) return;
   const form = document.getElementById("rsc-search-form");
   const input = document.getElementById("rsc-search-value");
-  const rows = Array.from(table.tBodies[0].rows);
+  const levelButtons = Array.from(document.querySelectorAll("#rsc-levels [data-level]"));
+  const order = document.getElementById("rsc-order");
+  const count = document.getElementById("rsc-count");
+  const body = table.tBodies[0];
+  const heading = body.querySelector(".level-undecided-heading");
+  const levelOf = (r) => {
+    const m = r.className.match(/level-color-(\d\d|undecided)/);
+    return m ? m[1] : "";
+  };
+  // Problem rows with their original position, so rows of the same level keep their order.
+  const problems = Array.from(body.rows)
+    .filter((r) => r !== heading)
+    .map((r, i) => ({ row: r, level: levelOf(r), i }));
+  let level = "all";
 
   function apply() {
     const year = input.value.trim();
-    rows.forEach((r) => {
-      r.style.display = year.length !== 4 || r.dataset.year === year ? "" : "none";
+    const hardFirst = order && order.value === "hard";
+    const rank = (p) => (p.level === "undecided" ? Infinity : Number(p.level) * (hardFirst ? -1 : 1));
+    const decided = problems.filter((p) => p.level !== "undecided").sort((a, b) => rank(a) - rank(b) || a.i - b.i);
+    const undecided = problems.filter((p) => p.level === "undecided");
+    // Problems without a level always stay at the bottom, under their own heading.
+    [...decided, ...(heading ? [{ row: heading }] : []), ...undecided].forEach((p) => body.appendChild(p.row));
+
+    let shown = 0;
+    let undecidedShown = 0;
+    problems.forEach((p) => {
+      const ok = (year.length !== 4 || p.row.dataset.year === year) && (level === "all" || p.level === level);
+      p.row.style.display = ok ? "" : "none";
+      if (ok) {
+        shown++;
+        if (p.level === "undecided") undecidedShown++;
+      }
     });
+    if (heading) heading.style.display = undecidedShown ? "" : "none";
+    if (count) count.textContent = shown === 1 ? "1 problem" : `${shown} problems`;
+    levelButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.level === level)));
   }
 
-  const fromUrl = new URLSearchParams(location.search).get("year");
-  if (fromUrl) input.value = fromUrl;
+  const params = new URLSearchParams(location.search);
+  if (params.get("year")) input.value = params.get("year");
+  if (levelButtons.some((b) => b.dataset.level === params.get("level"))) level = params.get("level");
 
   input.addEventListener("input", apply);
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     apply();
   });
+  levelButtons.forEach((b) =>
+    b.addEventListener("click", () => {
+      level = b.dataset.level;
+      apply();
+    }),
+  );
+  if (order) order.addEventListener("change", apply);
   apply();
 }
 

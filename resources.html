@@ -66,6 +66,8 @@
           Also you can, type in the year
           <mark class="text-highlight pink">in the format specified as below</mark> to get the problems from
           that year, <mark class="text-highlight blue">right-click</mark> and open / save file!
+          Pick a <mark class="text-highlight green">difficulty level</mark> to see only those problems, and
+          choose whether the easiest or the hardest come first.
         </p>
       </div>
 
@@ -86,6 +88,25 @@
           <button type="submit" class="btn btn-primary my-1">Search</button>
         </div>
       </form>
+      <div class="rsc-levels" id="rsc-levels" role="group" aria-label="Show problems of one difficulty level">
+        <span class="rsc-levels-label">Difficulty:</span>
+        <button type="button" class="btn rsc-level" data-level="all" aria-pressed="true">All</button>
+        <button type="button" class="btn rsc-level level-color-00" data-level="00" aria-pressed="false">Very easy</button>
+        <button type="button" class="btn rsc-level level-color-02" data-level="02" aria-pressed="false">Easy</button>
+        <button type="button" class="btn rsc-level level-color-04" data-level="04" aria-pressed="false">Medium</button>
+        <button type="button" class="btn rsc-level level-color-06" data-level="06" aria-pressed="false">Harder</button>
+        <button type="button" class="btn rsc-level level-color-08" data-level="08" aria-pressed="false">Hard</button>
+        <button type="button" class="btn rsc-level level-color-10" data-level="10" aria-pressed="false">Very hard</button>
+        <button type="button" class="btn rsc-level level-color-undecided" data-level="undecided" aria-pressed="false">Not decided yet</button>
+      </div>
+      <div class="rsc-order">
+        <label for="rsc-order">Order:</label>
+        <select id="rsc-order" class="custom-select custom-select-sm">
+          <option value="easy">Easiest first</option>
+          <option value="hard">Hardest first</option>
+        </select>
+        <span id="rsc-count" class="rsc-count" aria-live="polite"></span>
+      </div>
       <div class="row">
         <div class="table-responsive">
         <table class="table" id="rsc-table">
