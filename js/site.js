@@ -223,7 +223,7 @@ async function initPortal() {
     link.href = base + "/";
   } else if (isOpen.hall_tickets) {
     text.textContent =
-      "PLO 2027 Round 1 hall tickets are out for everyone who registered! Sign in to download yours. If you haven't chosen your examination centre, you must choose it on the portal by 24 November 2026. Can't sign in, or your hall ticket isn't there? Email plo@iiit.ac.in. The exam is from 10:00 AM to 2:00 PM; report by 9:30 AM.";
+      "PLO 2027 Round 1 hall tickets are out! Choose your centre on the portal if you haven't already. You can still register as a walk-in (Regular track only) at any examination centre on 29 November 2026.";
     link.textContent = "Sign in →";
     link.href = base + "/";
   }
@@ -305,13 +305,13 @@ function initBanner() {
     label = "View Timeline →";
     href = "index.html#home-timeline";
   } else if (registrationOpen()) {
-    msg = "PLO 2026-2027 Registration is OPEN — Last date <del>31 October 2026</del> 20 November 2026! <strong>Updated exam timing:</strong> 10:00 AM to 2:00 PM, report by 9:30 AM.";
+    msg = "PLO 2026-2027 Registration is OPEN — Last date 20 November 2026! <strong>Updated exam timing:</strong> 10:00 AM to 2:00 PM, report by 9:30 AM.";
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "PLO 2026-2027 online registration has closed. Registered but no centre yet? You must choose one on the portal by 24 November 2026. Not registered? Walk-in registration (Regular track only) is available at your examination centre on 29 November 2026.";
-    label = "Find your centre →";
-    href = "centres.html";
+    msg = "PLO 2027 Round 1 hall tickets are out! Choose your centre on the portal if you haven't already. You can still register as a walk-in (Regular track only) at any examination centre on 29 November 2026.";
+    label = "Sign in →";
+    href = PORTAL_URL.replace(/\/+$/, "") + "/";
   } else if (t < d.results) {
     msg = "Round 1 is over. Results will be announced on 15 January 2027.";
     label = "View Timeline →";
