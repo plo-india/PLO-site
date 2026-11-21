@@ -223,7 +223,7 @@ async function initPortal() {
     link.href = base + "/";
   } else if (isOpen.hall_tickets) {
     text.textContent =
-      "PLO 2027 Round 1 hall tickets are out! Choose your centre on the portal if you haven't already. You can still register as a walk-in (Regular track only) at any examination centre on 29 November 2026.";
+      "PLO 2027 Round 1 hall tickets are out! Choose your centre on the portal by 24 November 2026. You can still register as a walk-in (Regular track only) at any examination centre on 29 November 2026.";
     link.textContent = "Sign in →";
     link.href = base + "/";
   }
@@ -309,7 +309,7 @@ function initBanner() {
     label = "Register Now →";
     href = "registration.html";
   } else if (t <= d.round1) {
-    msg = "PLO 2027 Round 1 hall tickets are out! Choose your centre on the portal if you haven't already. You can still register as a walk-in (Regular track only) at any examination centre on 29 November 2026.";
+    msg = "PLO 2027 Round 1 hall tickets are out! Choose your centre on the portal by 24 November 2026. You can still register as a walk-in (Regular track only) at any examination centre on 29 November 2026.";
     label = "Sign in →";
     href = PORTAL_URL.replace(/\/+$/, "") + "/";
   } else if (t < d.results) {
